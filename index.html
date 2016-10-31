@@ -87,12 +87,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;"><a href="#&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;" class="headerlink" title="&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;"></a>&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;</h5><h5 id="&#x627E;&#x5230;-nginx-conf"><a href="#&#x627E;&#x5230;-nginx-conf" class="headerlink" title="&#x627E;&#x5230; nginx.conf"></a>&#x627E;&#x5230; nginx.conf</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">upstream python_servers {</div><div class="line">        server 8000 max_fails=2 fail_timeout=10s;</div><div class="line">    } &#xFF08;&#x6620;&#x5C04;&#x5230;&#x7684;&#x7AEF;&#x53E3;&#xFF09;</div><div class="line"></div><div class="line">    upstream h5_servers {</div><div class="line">        server 4000 max_fails=2 fail_timeout=10s;</div><div class="line">    }</div><div class="line"></div><div class="line">    upstream XXX_servers {</div><div class="line">        server 182.92.70.38:80 max_fails=2 fail_timeout=10s;</div><div class="line">    }</div><div class="line"></div><div class="line"></div><div class="line">    server {</div><div class="line">        listen       80; &#xFF08;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF09;</div><div class="line">        server_name  www.XXX localhost; &#xFF08;&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE;&#x57DF;&#x540D;&#xFF09;</div><div class="line"></div><div class="line">       location / {</div><div class="line">            proxy_pass http://h5_servers;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break; &#xFF08;&#x76D1;&#x542C;&#xFF09;</div><div class="line">        }</div><div class="line"></div><div class="line">        location /api_python/ {</div><div class="line">            proxy_pass http://python_servers/;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break;</div><div class="line">        }</div><div class="line"></div><div class="line">        location /cms/ {</div><div class="line">            proxy_pass http://cms_servers/;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break;</div><div class="line">        }</div><div class="line"></div><div class="line">        error_page   500 502 503 504  /50x.html;</div><div class="line">        location = /50x.html {</div><div class="line">            root   html;</div><div class="line">        }</div></pre></td></tr></table></figure>
+        <h5 id="&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;"><a href="#&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;" class="headerlink" title="&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;"></a>&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x6587;&#x4EF6;&#x5939;</h5><h5 id="&#x627E;&#x5230;-nginx-conf"><a href="#&#x627E;&#x5230;-nginx-conf" class="headerlink" title="&#x627E;&#x5230; nginx.conf"></a>&#x627E;&#x5230; nginx.conf</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">upstream python_servers {</div><div class="line">        server 8000 max_fails=2 fail_timeout=10s;</div><div class="line">    } &#xFF08;&#x6620;&#x5C04;&#x5230;&#x7684;&#x7AEF;&#x53E3;&#xFF09;</div><div class="line"></div><div class="line">    upstream h5_servers {</div><div class="line">        server 4000 max_fails=2 fail_timeout=10s;</div><div class="line">    }</div><div class="line"></div><div class="line">    upstream XXX_servers {</div><div class="line">        server 182.92.70.38:80 max_fails=2 fail_timeout=10s;</div><div class="line">    }</div><div class="line"></div><div class="line"></div><div class="line">    server {</div><div class="line">        listen       80; &#xFF08;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF09;</div><div class="line">        server_name  www.XXX localhost; &#xFF08;&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE;&#x57DF;&#x540D;&#xFF09;</div><div class="line"></div><div class="line">       location / {</div><div class="line">            proxy_pass http://h5_servers;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break; &#xFF08;&#x76D1;&#x542C;&#xFF09;</div><div class="line">        }</div><div class="line"></div><div class="line">        location /api_python/ {</div><div class="line">            proxy_pass http://python_servers/;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break;</div><div class="line">        }</div><div class="line"></div><div class="line">        location /XXX(&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x5B57;&#x7B26;)/ {</div><div class="line">            proxy_pass http://cms_servers/;</div><div class="line">            include proxy/proxy.conf;</div><div class="line">            break;</div><div class="line">        }</div><div class="line"></div><div class="line">        error_page   500 502 503 504  /50x.html;</div><div class="line">        location = /50x.html {</div><div class="line">            root   html;</div><div class="line">        }</div></pre></td></tr></table></figure>
 <h5 id="C&#x76D8;-Windows-system32-drivers-etc-host"><a href="#C&#x76D8;-Windows-system32-drivers-etc-host" class="headerlink" title="C&#x76D8; Windows system32 drivers  etc  host"></a>C&#x76D8; Windows system32 drivers  etc  host</h5><h5 id="192-168-16-49-WWW-xxxx"><a href="#192-168-16-49-WWW-xxxx" class="headerlink" title="192.168.16.49  WWW.xxxx"></a>192.168.16.49  WWW.xxxx</h5><h5 id="&#x6307;&#x5411;&#x672C;&#x5730;"><a href="#&#x6307;&#x5411;&#x672C;&#x5730;" class="headerlink" title="&#x6307;&#x5411;&#x672C;&#x5730;"></a>&#x6307;&#x5411;&#x672C;&#x5730;</h5>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/31/JQuery/nginx/" data-id="ciuxli0cr000l25nbcq49mtw7" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/10/31/JQuery/nginx/" data-id="ciuxlzgit00165nnb243vk724" class="article-share-link">分享</a>
       
       
     </footer>
@@ -134,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/10/JQuery/TimeDifference/" data-id="ciuxli0cm000e25nblu8wvc57" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/10/10/JQuery/TimeDifference/" data-id="ciuxlzgi7000j5nnb1c1f256v" class="article-share-link">分享</a>
       
       
     </footer>
@@ -181,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/JavaScript/sort/" data-id="ciuxli0d5001025nbjzsdpaup" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/29/JavaScript/sort/" data-id="ciuxlzgik000x5nnbn0bc21ik" class="article-share-link">分享</a>
       
       
     </footer>
@@ -222,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/28/sublime/浏览器快捷键/" data-id="ciuxli0dj001h25nb2ru2m0xw" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/28/sublime/浏览器快捷键/" data-id="ciuxlzgja001l5nnbtp0uwtpg" class="article-share-link">分享</a>
       
       
     </footer>
@@ -267,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/26/HTML/localStorage/" data-id="ciuxli0c1000125nbfvd6an1q" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/26/HTML/localStorage/" data-id="ciuxlzghm00035nnbu064wrgw" class="article-share-link">分享</a>
       
       
     </footer>
@@ -312,7 +312,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/22/JavaScript/transformationString/" data-id="ciuxli0d8001225nb9tasrqjy" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/22/JavaScript/transformationString/" data-id="ciuxlzgii000u5nnbv9mu76s8" class="article-share-link">分享</a>
       
       
     </footer>
@@ -364,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/22/JavaScript/判断字符串个数/" data-id="ciuxli0da001425nbdyyd591i" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/22/JavaScript/判断字符串个数/" data-id="ciuxlzgin000z5nnbq8x739iy" class="article-share-link">分享</a>
       
       
     </footer>
@@ -405,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/21/Highcharts/问题小结/" data-id="ciuxli0cz000t25nbzu7cobdx" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/21/Highcharts/问题小结/" data-id="ciuxlzgi1000c5nnbvqaabitl" class="article-share-link">分享</a>
       
       
     </footer>
@@ -558,7 +558,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/10/JavaScript/Function/" data-id="ciuxli0d1000v25nbfghbzztt" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/10/JavaScript/Function/" data-id="ciuxlzgip00125nnbxtabokoh" class="article-share-link">分享</a>
       
       
     </footer>
@@ -722,7 +722,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/05/HTML/background/" data-id="ciuxli0co000h25nblxn1on43" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2016/09/05/HTML/background/" data-id="ciuxlzghy00095nnbox3m2ofo" class="article-share-link">分享</a>
       
       
     </footer>
