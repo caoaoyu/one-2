@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>判断字符串个数 | 小小鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x7B2C;&amp;#x4E00;&amp;#x79CD;&amp;#xFF1A;
+
+1234567891011var str = &amp;apos;seeed22586482555&amp;apos;;    var json = {};     for (var i = 0; i &amp;lt; str.length; i++) {      if (!json[str.charAt(i)]) {        json[st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判断字符串个数">
+<meta property="og:url" content="http://yoursite.com/2016/09/21/JavaScript/判断字符串个数/index.html">
+<meta property="og:site_name" content="小小鱼">
+<meta property="og:description" content="&amp;#x7B2C;&amp;#x4E00;&amp;#x79CD;&amp;#xFF1A;
+
+1234567891011var str = &amp;apos;seeed22586482555&amp;apos;;    var json = {};     for (var i = 0; i &amp;lt; str.length; i++) {      if (!json[str.charAt(i)]) {        json[st">
+<meta property="og:updated_time" content="2016-09-22T11:30:14.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="判断字符串个数">
+<meta name="twitter:description" content="&amp;#x7B2C;&amp;#x4E00;&amp;#x79CD;&amp;#xFF1A;
+
+1234567891011var str = &amp;apos;seeed22586482555&amp;apos;;    var json = {};     for (var i = 0; i &amp;lt; str.length; i++) {      if (!json[str.charAt(i)]) {        json[st">
+  
+    <link rel="alternate" href="/atom.xml" title="小小鱼" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小小鱼</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript/判断字符串个数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/21/JavaScript/判断字符串个数/" class="article-date">
+  <time datetime="2016-09-21T11:11:05.911Z" itemprop="datePublished">2016-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      判断字符串个数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var str = &apos;seeed22586482555&apos;;</div><div class="line">    var json = {};</div><div class="line">     for (var i = 0; i &lt; str.length; i++) {</div><div class="line">      if (!json[str.charAt(i)]) {</div><div class="line">        json[str.charAt(i)] = 1;</div><div class="line">      } else {</div><div class="line">        json[str.charAt(i)]++;</div><div class="line">      }</div><div class="line">    } </div><div class="line"></div><div class="line">console.log(json)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;</p>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var str = &quot;seeed22586482555&quot;;</div><div class="line">var obj = {};</div><div class="line">for(var i = 0; i &lt; str.length; i++) {</div><div class="line">	var entry = str[i];</div><div class="line">	if(entry in obj) {</div><div class="line">		obj[entry] ++;</div><div class="line">	}else{</div><div class="line">		obj[entry] = 1;</div><div class="line">	}</div><div class="line">}</div><div class="line">console.log(&apos;&#x6253;&#x5370;&apos;, obj);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x7B2C;&#x4E09;&#x79CD;:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">var str = &quot;12663338965880&quot;;</div><div class="line">   var array = str.split(&quot;&quot;);  </div><div class="line">   	array.sort();</div><div class="line">   var countArray = [];</div><div class="line">   var CountObj = function(character){</div><div class="line">     this.count = 1</div><div class="line">     this.character = character;</div><div class="line">     return this;</div><div class="line">   }</div><div class="line">   var arrayObj = null,</div><div class="line">     	countArrayObj = null,</div><div class="line">     	arrayLength = 0;</div><div class="line">   for (var i = 0, length = array.length; i &lt; length; i++) {</div><div class="line">     		arrayObj = array[i];</div><div class="line">     		arrayLength = countArray.length;</div><div class="line">      if (arrayLength &gt; 0) {</div><div class="line">        countArrayObj = countArray[arrayLength - 1];</div><div class="line">        if (countArrayObj.character == arrayObj) {</div><div class="line">          countArrayObj.count = countArrayObj.count + 1;</div><div class="line">          // console.log(countArrayObj.count)</div><div class="line">        } else {</div><div class="line">          countArray.push(new CountObj(arrayObj));</div><div class="line">          </div><div class="line">        }</div><div class="line">      } else {</div><div class="line">        countArray.push(new CountObj(arrayObj));</div><div class="line">        console.log(countArray)</div><div class="line">      }</div><div class="line">    }</div><div class="line">   for(var i=0,length=countArray.length; i&lt;length; i++) {</div><div class="line">     countArrayObj = countArray[i];</div><div class="line">     console.log(countArrayObj.character + &quot;:&quot; + countArrayObj.count);</div><div class="line">   }</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/21/JavaScript/判断字符串个数/" data-id="ciu6t5p11000xe8nu4k66xvwl" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/22/JavaScript/transformationString/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新</strong>
+      <div class="article-nav-title">
+        
+          转换json字符串类型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/20/Highcharts/问题小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">旧文章</strong>
+      <div class="article-nav-title">Highcharts实例</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Highcharts/">Highcharts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJs/">RequireJs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SASS/">SASS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bootstrap/">bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/sublime/">sublime</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/12/JQuery/nginx/">nginx 配置 location</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/10/JQuery/TimeDifference/">如何实现时间相减得到所需时差</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/29/JavaScript/sort/">Sort()排序</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/28/sublime/浏览器快捷键/">浏览器快捷键绑定</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/23/HTML/localStorage/">localstorage</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 小小鱼<br>
+      技术支持 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

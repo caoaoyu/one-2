@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何实现时间相减得到所需时差 | 小小鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314function order_time(time){var now_time = moment().format(&amp;apos;X&amp;apos;); //moment.js &amp;#x65E5;&amp;#x671F;&amp;#x63D2;&amp;#x4EF6;var time = time;var total = (time - now_time); var day = parseI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何实现时间相减得到所需时差">
+<meta property="og:url" content="http://yoursite.com/2016/10/10/JQuery/TimeDifference/index.html">
+<meta property="og:site_name" content="小小鱼">
+<meta property="og:description" content="1234567891011121314function order_time(time){var now_time = moment().format(&amp;apos;X&amp;apos;); //moment.js &amp;#x65E5;&amp;#x671F;&amp;#x63D2;&amp;#x4EF6;var time = time;var total = (time - now_time); var day = parseI">
+<meta property="og:updated_time" content="2016-10-10T11:22:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何实现时间相减得到所需时差">
+<meta name="twitter:description" content="1234567891011121314function order_time(time){var now_time = moment().format(&amp;apos;X&amp;apos;); //moment.js &amp;#x65E5;&amp;#x671F;&amp;#x63D2;&amp;#x4EF6;var time = time;var total = (time - now_time); var day = parseI">
+  
+    <link rel="alternate" href="/atom.xml" title="小小鱼" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小小鱼</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JQuery/TimeDifference" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/10/JQuery/TimeDifference/" class="article-date">
+  <time datetime="2016-10-10T11:22:10.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何实现时间相减得到所需时差
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function order_time(time){</div><div class="line"></div><div class="line">var now_time = moment().format(&apos;X&apos;); //moment.js &#x65E5;&#x671F;&#x63D2;&#x4EF6;</div><div class="line">var time = time;</div><div class="line">var total = (time - now_time); </div><div class="line"></div><div class="line">var day = parseInt(total / (24*60*60));//&#x8BA1;&#x7B97;&#x6574;&#x6570;&#x5929;&#x6570;</div><div class="line">var afterDay = total - day*24*60*60;//&#x53D6;&#x5F97;&#x7B97;&#x51FA;&#x5929;&#x6570;&#x540E;&#x5269;&#x4F59;&#x7684;&#x79D2;&#x6570;</div><div class="line">var hour = parseInt(afterDay/(60*60));//&#x8BA1;&#x7B97;&#x6574;&#x6570;&#x5C0F;&#x65F6;&#x6570;</div><div class="line">var afterHour = total - day*24*60*60 - hour*60*60;//&#x53D6;&#x5F97;&#x7B97;&#x51FA;&#x5C0F;&#x65F6;&#x6570;&#x540E;&#x5269;&#x4F59;&#x7684;&#x79D2;&#x6570;</div><div class="line">var min = parseInt(afterHour/60);//&#x8BA1;&#x7B97;&#x6574;&#x6570;&#x5206;</div><div class="line">var afterMin = total - day*24*60*60 - hour*60*60 - min*60;//&#x53D6;&#x5F97;&#x7B97;&#x51FA;&#x5206;&#x540E;&#x5269;&#x4F59;&#x7684;&#x79D2;&#x6570;</div><div class="line">console.log([day,hour,min,afterMin].join(&apos;:&apos;))</div><div class="line">}</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/10/JQuery/TimeDifference/" data-id="ciuxli0cm000e25nblu8wvc57" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/31/JQuery/nginx/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新</strong>
+      <div class="article-nav-title">
+        
+          nginx 配置 location
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/29/JavaScript/sort/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">旧文章</strong>
+      <div class="article-nav-title">Sort()排序</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Highcharts/">Highcharts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJs/">RequireJs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SASS/">SASS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bootstrap/">bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/sublime/">sublime</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/31/JQuery/nginx/">nginx 配置 location</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/10/JQuery/TimeDifference/">如何实现时间相减得到所需时差</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/29/JavaScript/sort/">Sort()排序</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/28/sublime/浏览器快捷键/">浏览器快捷键绑定</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/HTML/localStorage/">localstorage</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 小小鱼<br>
+      技术支持 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

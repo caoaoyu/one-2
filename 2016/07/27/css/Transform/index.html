@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>transform 属性 | 小小鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS3 transform&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;?transform&amp;#x7684;&amp;#x542B;&amp;#x4E49;&amp;#x662F;:&amp;#x6539;&amp;#x53D8; &amp;#x53D8;&amp;#x5F62; &amp;#x8F6C;&amp;#x6362;transform&amp;#x7684;&amp;#x5C5E;&amp;#x6027;&amp;#x5305;&amp;#x62EC;:rotate() / skew() /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="transform 属性">
+<meta property="og:url" content="http://yoursite.com/2016/07/27/css/Transform/index.html">
+<meta property="og:site_name" content="小小鱼">
+<meta property="og:description" content="CSS3 transform&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;?transform&amp;#x7684;&amp;#x542B;&amp;#x4E49;&amp;#x662F;:&amp;#x6539;&amp;#x53D8; &amp;#x53D8;&amp;#x5F62; &amp;#x8F6C;&amp;#x6362;transform&amp;#x7684;&amp;#x5C5E;&amp;#x6027;&amp;#x5305;&amp;#x62EC;:rotate() / skew() /">
+<meta property="og:updated_time" content="2016-07-27T10:03:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="transform 属性">
+<meta name="twitter:description" content="CSS3 transform&amp;#x662F;&amp;#x4EC0;&amp;#x4E48;?transform&amp;#x7684;&amp;#x542B;&amp;#x4E49;&amp;#x662F;:&amp;#x6539;&amp;#x53D8; &amp;#x53D8;&amp;#x5F62; &amp;#x8F6C;&amp;#x6362;transform&amp;#x7684;&amp;#x5C5E;&amp;#x6027;&amp;#x5305;&amp;#x62EC;:rotate() / skew() /">
+  
+    <link rel="alternate" href="/atom.xml" title="小小鱼" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小小鱼</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css/Transform" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/27/css/Transform/" class="article-date">
+  <time datetime="2016-07-27T10:03:54.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      transform 属性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="CSS3-transform&#x662F;&#x4EC0;&#x4E48;"><a href="#CSS3-transform&#x662F;&#x4EC0;&#x4E48;" class="headerlink" title="CSS3 transform&#x662F;&#x4EC0;&#x4E48;?"></a>CSS3 transform&#x662F;&#x4EC0;&#x4E48;?</h5><p>transform&#x7684;&#x542B;&#x4E49;&#x662F;:&#x6539;&#x53D8; &#x53D8;&#x5F62; &#x8F6C;&#x6362;<br>transform&#x7684;&#x5C5E;&#x6027;&#x5305;&#x62EC;:rotate() / skew() / scale() / translate() &#x5206;&#x522B;&#x8FD8;&#x6709;x&#x3001;y&#x4E4B;&#x5206;<br>transform&#x5C5E;&#x6027;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x53EF;&#x7528;SVG&#x5B9E;&#x73B0;&#x7684;&#x540C;&#x6837;&#x7684;&#x529F;&#x80FD;,&#x5B83;&#x53EF;&#x7528;&#x4E8E;&#x5185;&#x8054;(inline)&#x5143;&#x7D20;&#x548C;&#x5757;&#x7EA7;(block)&#x5143;&#x7D20;<br>&#x5B83;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x65CB;&#x8F6C;&#x7F29;&#x653E;&#x548C;&#x79FB;&#x52A8;&#x5143;&#x7D20;,&#x5C5E;&#x6027;&#x503C;&#x53C2;&#x6570;:rotate  translate scale skew matrix</p>
+<blockquote>
+<h5 id="&#x65CB;&#x8F6C;-transform-rotate"><a href="#&#x65CB;&#x8F6C;-transform-rotate" class="headerlink" title="&#x65CB;&#x8F6C; transform:rotate"></a>&#x65CB;&#x8F6C; transform:rotate</h5></blockquote>
+<p>&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#x53C2;&#x6570;&#x5BF9;&#x539F;&#x5143;&#x7D20;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;2D rotation(2D)&#x65CB;&#x8F6C;,&#x9700;&#x5148;&#x6709;transform-origin&#x5C5E;&#x6027;&#x7684;&#x5B9A;&#x4E49;.<br>transform-origin&#x5B9A;&#x4E49;&#x7684;&#x662F;&#x65CB;&#x8F6C;&#x7684;&#x57FA;&#x70B9;,&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x4E3A;&#x6B63;&#x6570;&#x8868;&#x793A;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;,&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x4E3A;&#x8D1F;&#x6570;,&#x5219;&#x8868;&#x793A;&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C; &#x5982;:transform:rotate(30deg):&#x5176;&#x4E2D;&#x201C;deg&#x201D;&#x662F;&#x201C;&#x5EA6;&#x201D;&#x7684;&#x610F;&#x601D;,&#x5982;&#x201C;30deg&#x201D;&#x8868;&#x793A;&#x201C;30&#x5EA6;&#x201D;</p>
+<blockquote>
+<h5 id="&#x626D;&#x66F2;-transform-skew"><a href="#&#x626D;&#x66F2;-transform-skew" class="headerlink" title="&#x626D;&#x66F2; transform:skew"></a>&#x626D;&#x66F2; transform:skew</h5></blockquote>
+<p>&#x626D;&#x66F2;skew&#x548C;translate&#x3001;scale&#x4E00;&#x6837;&#x540C;&#x6837;&#x5177;&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;:skew(x,y)&#x4F7F;&#x5143;&#x7D20;&#x5728;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x540C;&#x65F6;&#x626D;&#x66F2;(X&#x8F74;&#x548C;Y&#x8F74;&#x540C;&#x65F6;&#x6309;&#x4E00;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#x503C;&#x8FDB;&#x884C;&#x626D;&#x66F2;&#x53D8;&#x5F62;)&#xFF1B;skewX(x)&#x4EC5;&#x4F7F;&#x5143;&#x7D20;&#x5728;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x626D;&#x66F2;&#x53D8;&#x5F62;(X&#x8F74;&#x626D;&#x66F2;&#x53D8;&#x5F62;);skewY(y)&#x4EC5;&#x4F7F;&#x5143;&#x7D20;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x626D;&#x66F2;&#x53D8;&#x5F62;(Y&#x8F74;&#x626D;&#x66F2;&#x53D8;&#x5F62;)</p>
+<p>1&#x3001;skew(<angle> [, <angle>]) &#xFF1A;X&#x8F74;Y&#x8F74;&#x4E0A;&#x7684;skew transformation(&#x659C;&#x5207;&#x53D8;&#x6362;) &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5BF9;&#x5E94;X&#x8F74;,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5BF9;&#x5E94;Y&#x8F74; &#x5982;&#x679C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x672A;&#x63D0;&#x4F9B;,&#x5219;&#x503C;&#x4E3A;0,&#x4E5F;&#x5C31;&#x662F;Y&#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x65E0;&#x659C;&#x5207; skew&#x662F;&#x7528;&#x6765;&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x626D;&#x66F2;&#x53D8;&#x884C;,&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x626D;&#x66F2;&#x89D2;&#x5EA6;,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x626D;&#x66F2;&#x89D2;&#x5EA6; &#x5176;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;,&#x90A3;&#x4E48;Y&#x8F74;&#x4E3A;0deg &#x540C;&#x6837;&#x662F;&#x4EE5;&#x5143;&#x7D20;&#x4E2D;&#x5FC3;&#x4E3A;&#x57FA;&#x70B9;,&#x4E5F;&#x53EF;&#x4EE5;transform-origin&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;</angle></angle></p>
+<p>2&#x3001;skewX(<angle>) :&#x6309;&#x7ED9;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#x6CBF;X&#x8F74;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;skew transformation(&#x659C;&#x5207;&#x53D8;&#x6362;)skewX&#x662F;&#x4F7F;&#x5143;&#x7D20;&#x4EE5;&#x5176;&#x4E2D;&#x5FC3;&#x4E3A;&#x57FA;&#x70B9;,&#x5E76;&#x5728;&#x6C34;&#x5E73;&#x65B9;&#x5411;(X&#x8F74;)&#x8FDB;&#x884C;&#x626D;&#x66F2;&#x53D8;&#x884C;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transform-origin&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9; &#x5982;:transform:skewX(30deg)</angle></p>
+<p>3&#x3001;skewY(<angle>) &#xFF1A; &#x6309;&#x7ED9;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#x6CBF;Y&#x8F74;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;skew transformation(&#x659C;&#x5207;&#x53D8;&#x6362;) skewY&#x662F;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x4EE5;&#x5176;&#x4E2D;&#x5FC3;&#x4E3A;&#x57FA;&#x70B9;&#x5E76;&#x6309;&#x7ED9;&#x5B9A;&#x7684;&#x89D2;&#x5EA6;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5411;(Y&#x8F74;)&#x626D;&#x66F2;&#x53D8;&#x5F62; &#x540C;&#x6837;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transform-origin&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9; &#x5982;:transform:skewY(10deg)</angle></p>
+<blockquote>
+<h5 id="&#x7F29;&#x653E;-scale"><a href="#&#x7F29;&#x653E;-scale" class="headerlink" title="&#x7F29;&#x653E; scale"></a>&#x7F29;&#x653E; scale</h5></blockquote>
+<p>&#x7F29;&#x653E;scale&#x548C;&#x79FB;&#x52A8;translate&#x662F;&#x6781;&#x5176;&#x76F8;&#x4F3C;,&#x4E5F;&#x5177;&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;:scale(x,y)&#x4F7F;&#x5143;&#x7D20;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x548C;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x540C;&#x65F6;&#x7F29;&#x653E;(&#x4E5F;&#x5C31;&#x662F;X&#x8F74;&#x548C;Y&#x8F74;&#x540C;&#x65F6;&#x7F29;&#x653E;)&#xFF1B;scaleX(x)&#x5143;&#x7D20;&#x4EC5;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7F29;&#x653E;(X&#x8F74;&#x7F29;&#x653E;)&#xFF1B;scaleY(y)&#x5143;&#x7D20;&#x4EC5;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7F29;&#x653E;(Y&#x8F74;&#x7F29;&#x653E;),&#x4F46;&#x5B83;&#x4EEC;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x7F29;&#x653E;&#x4E2D;&#x5FC3;&#x70B9;&#x548C;&#x57FA;&#x6570;,&#x5176;&#x4E2D;&#x5FC3;&#x70B9;&#x5C31;&#x662F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;,&#x7F29;&#x653E;&#x57FA;&#x6570;&#x4E3A;1,&#x5982;&#x679C;&#x5176;&#x503C;&#x5927;&#x4E8E;1&#x5143;&#x7D20;&#x5C31;&#x653E;&#x5927;,&#x53CD;&#x4E4B;&#x5176;&#x503C;&#x5C0F;&#x4E8E;1,&#x5143;&#x7D20;&#x7F29;&#x5C0F; &#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5177;&#x4F53;&#x6765;&#x770B;&#x770B;&#x8FD9;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>1&#x3001;scale(<number>[, <number>])&#xFF1A;&#x63D0;&#x4F9B;&#x6267;&#x884C;[sx,sy]&#x7F29;&#x653E;&#x77E2;&#x91CF;&#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;2D scale(2D&#x7F29;&#x653E;) &#x5982;&#x679C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x672A;&#x63D0;&#x4F9B;,&#x5219;&#x53D6;&#x4E0E;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x7684;&#x503C; scale(X,Y)&#x662F;&#x7528;&#x4E8E;&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x7F29;&#x653E;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transform-origin&#x5BF9;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;,&#x540C;&#x6837;&#x57FA;&#x70B9;&#x5728;&#x5143;&#x7D20;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#xFF1B;&#x57FA;&#x4E2D;X&#x8868;&#x793A;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7F29;&#x653E;&#x7684;&#x500D;&#x6570;,Y&#x8868;&#x793A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x7F29;&#x653E;&#x500D;&#x6570;,&#x800C;Y&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;Y&#x503C;,&#x5219;&#x8868;&#x793A;X,Y&#x4E24;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x7F29;&#x653E;&#x500D;&#x6570;&#x662F;&#x4E00;&#x6837;&#x7684; &#x5E76;&#x4EE5;X&#x4E3A;&#x51C6; &#x5982;:transform:scale(2,1.5):<br>transform:translate()</number></number></p>
+<p>2&#x3001;scaleX(<number>):&#x4F7F;&#x7528; [sx,1] &#x7F29;&#x653E;&#x77E2;&#x91CF;&#x6267;&#x884C;&#x7F29;&#x653E;&#x64CD;&#x4F5C;,sx&#x4E3A;&#x6240;&#x9700;&#x53C2;&#x6570; scaleX&#x8868;&#x793A;&#x5143;&#x7D20;&#x53EA;&#x5728;X&#x8F74;(&#x6C34;&#x5E73;&#x65B9;&#x5411;)&#x7F29;&#x653E;&#x5143;&#x7D20;,&#x4ED6;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;(1,1),&#x5176;&#x57FA;&#x70B9;&#x4E00;&#x6837;&#x662F;&#x5728;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;,&#x6211;&#x4EEC;&#x540C;&#x6837;&#x662F;&#x901A;&#x8FC7;transform-origin&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9; &#x5982;:transform:scaleX(2):</number></p>
+<p>3&#x3001;scaleY(<number>):&#x4F7F;&#x7528; [1,sy] &#x7F29;&#x653E;&#x77E2;&#x91CF;&#x6267;&#x884C;&#x7F29;&#x653E;&#x64CD;&#x4F5C;,sy&#x4E3A;&#x6240;&#x9700;&#x53C2;&#x6570; scaleY&#x8868;&#x793A;&#x5143;&#x7D20;&#x53EA;&#x5728;Y&#x8F74;(&#x5782;&#x76F4;&#x65B9;&#x5411;)&#x7F29;&#x653E;&#x5143;&#x7D20;,&#x5176;&#x57FA;&#x70B9;&#x540C;&#x6837;&#x662F;&#x5728;&#x5143;&#x7D20;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transform-origin&#x6765;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9; &#x5982;transform:scaleY(2):</number></p>
+<blockquote>
+<h5 id="&#x79FB;&#x52A8;-translate"><a href="#&#x79FB;&#x52A8;-translate" class="headerlink" title="&#x79FB;&#x52A8; translate"></a>&#x79FB;&#x52A8; translate</h5></blockquote>
+<p>&#x79FB;&#x52A8;translate&#x6211;&#x4EEC;&#x5206;&#x4E3A;&#x4E09;&#x79CD;&#x60C5;&#x51B5;:translate(x,y)&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x548C;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x540C;&#x65F6;&#x79FB;&#x52A8;(&#x4E5F;&#x5C31;&#x662F;X&#x8F74;&#x548C;Y&#x8F74;&#x540C;&#x65F6;&#x79FB;&#x52A8;)translateX(x)&#x4EC5;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x79FB;&#x52A8;(X&#x8F74;&#x79FB;&#x52A8;)translateY(Y)&#x4EC5;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x79FB;&#x52A8;(Y&#x8F74;&#x79FB;&#x52A8;)</p>
+<p>1.translate(<translation-value>[, <translation-value>])&#x901A;&#x8FC7;&#x77E2;&#x91CF;[tx, ty]&#x6307;&#x5B9A;&#x4E00;&#x4E2A;2D translation,tx &#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x8FC7;&#x6E21;&#x503C;&#x53C2;&#x6570;,ty &#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x8FC7;&#x6E21;&#x503C;&#x53C2;&#x6570;&#x9009;&#x9879; &#x5982;&#x679C; &#x672A;&#x88AB;&#x63D0;&#x4F9B;,&#x5219;ty&#x4EE5; 0 &#x4F5C;&#x4E3A;&#x5176;&#x503C; &#x4E5F;&#x5C31;&#x662F;translate(x,y),&#x5B83;&#x8868;&#x793A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5E73;&#x79FB;,&#x6309;&#x7167;&#x8BBE;&#x5B9A;&#x7684;x,y&#x53C2;&#x6570;&#x503C;,&#x5F53;&#x503C;&#x4E3A;&#x8D1F;&#x6570;&#x65F6;,&#x53CD;&#x65B9;&#x5411;&#x79FB;&#x52A8;&#x7269;&#x4F53;,&#x5176;&#x57FA;&#x70B9;&#x9ED8;&#x8BA4;&#x4E3A;&#x5143;&#x7D20; &#x4E2D;&#x5FC3;&#x70B9;,&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;transform-origin&#x8FDB;&#x884C;&#x6539;&#x53D8;&#x57FA;&#x70B9;<br>&#x5982;transform:translate(100px,20px):&#x4F4D;&#x79FB;;&#x5982;&#x4E0B;&#x8868;&#x793A;&#x5411;&#x53F3;&#x4F4D;&#x79FB;120&#x50CF;&#x7D20;,&#x5982;&#x679C;&#x5411;&#x4E0A;&#x4F4D;&#x79FB;,&#x628A;&#x540E;&#x9762;&#x7684;&#x201C;0&#x201D;&#x6539;&#x4E2A;&#x503C;&#x5C31;&#x884C;,&#x5411;&#x5DE6;&#x5411;&#x4E0B;&#x4F4D;&#x79FB;&#x5219;&#x4E3A;&#x8D1F;&#x201C;-&#x201D;</translation-value></translation-value></p>
+<p>2.translateX(<translation-value>)&#x901A;&#x8FC7;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;X&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x6570;&#x76EE;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;translation.&#x53EA;&#x5411;x&#x8F74;&#x8FDB;&#x884C;&#x79FB;&#x52A8;&#x5143;&#x7D20;,&#x540C;&#x6837;&#x5176;&#x57FA;&#x70B9;&#x662F;&#x5143;&#x7D20;&#x4E2D;&#x5FC3;&#x70B9;,&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;transform-origin&#x6539;&#x53D8;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;.<br>&#x5982;:transform:translateX(100px)</translation-value></p>
+<p>3&#x3001;translateY(<translation-value>):&#x901A;&#x8FC7;&#x7ED9;&#x5B9A;Y&#x65B9;&#x5411;&#x7684;&#x6570;&#x76EE;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;translation&#x53EA;&#x5411;Y&#x8F74;&#x8FDB;&#x884C;&#x79FB;&#x52A8;,&#x57FA;&#x70B9;&#x5728;&#x5143;&#x7D20;&#x5FC3;&#x70B9;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;transform-origin&#x6539;&#x53D8;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;<br>&#x5982;:transform:translateY(20px)</translation-value></p>
+<blockquote>
+<h5 id="&#x77E9;&#x9635;-matrix"><a href="#&#x77E9;&#x9635;-matrix" class="headerlink" title="&#x77E9;&#x9635; matrix"></a>&#x77E9;&#x9635; matrix</h5></blockquote>
+<p>matrix(<number>, <number>, <number>, <number>, <number>, <number>) &#xFF1A; &#x4EE5;&#x4E00;&#x4E2A;&#x542B;&#x516D;&#x503C;&#x7684;(a,b,c,d,e,f)&#x53D8;&#x6362;&#x77E9;&#x9635;&#x7684;&#x5F62;&#x5F0F;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;2D&#x53D8;&#x6362;,&#x76F8;&#x5F53;&#x4E8E;&#x76F4;&#x63A5;&#x5E94;&#x7528;&#x4E00;&#x4E2A;[a b c d e f]&#x53D8;&#x6362;&#x77E9;&#x9635; &#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x6C34;&#x5E73;&#x65B9;&#x5411;(X&#x8F74;)&#x548C;&#x5782;&#x76F4;&#x65B9;&#x5411;(Y&#x8F74;)&#x91CD;&#x65B0;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;,&#x6B64;&#x5C5E;&#x6027;&#x503C;&#x4F7F;&#x7528;&#x6D89;&#x53CA;&#x5230;&#x6570;&#x5B66;&#x4E2D;&#x7684;&#x77E9;&#x9635;</number></number></number></number></number></number></p>
+<p>&#x6539;&#x53D8;&#x5143;&#x7D20;&#x57FA;&#x70B9;transform-origin</p>
+<p>&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x8FDB;&#x884C;transform&#x52A8;&#x4F5C;&#x4E4B;&#x524D;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;<br>transform&#x8FDB;&#x884C;&#x7684;rotate,translate,scale,skew,matrix&#x7B49;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x4EE5;&#x5143;&#x7D20;&#x81EA;&#x5DF1;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x53D8;&#x5316;&#x7684;<br>&#x4F7F;&#x7528;transform-origin&#x6765;&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;&#x6539;&#x53D8;,&#x5143;&#x7D20;&#x57FA;&#x70B9;&#x4E0D;&#x5728;&#x662F;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;,&#x4EE5;&#x8FBE;&#x5230;&#x9700;&#x8981;&#x7684;&#x57FA;&#x70B9;&#x4F4D;&#x7F6E;</p>
+<p>transform-origin(X,Y):&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x8FD0;&#x52A8;&#x7684;&#x57FA;&#x70B9;&#x9ED8;&#x8BA4;&#x70B9;&#x662F;&#x5143;&#x7D20;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;,&#x5176;&#x4E2D;X&#x548C;Y&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x767E;&#x5206;&#x503C;,em,px,&#x5176;&#x4E2D;X&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x7B26;&#x53C2;&#x6570;&#x503C;left,center,right;Y&#x548C;X&#x4E00;&#x6837;&#x9664;&#x4E86;&#x767E;&#x5206;&#x503C;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5B57;&#x7B26;&#x503C;top,center,bottom</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1&#x3001;top left</td>
+<td>left top       &#x7B49;&#x4EF7;&#x4E8E; 0 0</td>
+</tr>
+<tr>
+<td>2&#x3001;top</td>
+<td>top center     &#x7B49;&#x4EF7;&#x4E8E; 50% 0</td>
+</tr>
+<tr>
+<td>3&#x3001;right top</td>
+<td>top right      &#x7B49;&#x4EF7;&#x4E8E; 100% 0</td>
+</tr>
+<tr>
+<td>4&#x3001;left</td>
+<td>left center    &#x7B49;&#x4EF7;&#x4E8E; 0 50% 0% 50%</td>
+</tr>
+<tr>
+<td>5&#x3001;center</td>
+<td>center center &#x7B49;&#x4EF7;&#x4E8E; 50% 50%(&#x9ED8;&#x8BA4;&#x503C;)</td>
+</tr>
+<tr>
+<td>6&#x3001;right</td>
+<td>right center  &#x7B49;&#x4EF7;&#x4E8E; 100% 50%</td>
+</tr>
+<tr>
+<td>7&#x3001;bottom left</td>
+<td>left bottom   &#x7B49;&#x4EF7;&#x4E8E; 0 100%  0% 100%</td>
+</tr>
+<tr>
+<td>8&#x3001;bottom</td>
+<td>bottom center &#x7B49;&#x4EF7;&#x4E8E; 50% 100%</td>
+</tr>
+<tr>
+<td>9&#x3001;bottom right</td>
+<td>right bottom  &#x7B49;&#x4EF7;&#x4E8E; 100% 100%</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4E2D;left,center,right,&#x662F;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x53D6;&#x503C;,&#x5BF9;&#x5E94;&#x7684;&#x767E;&#x5206;&#x503C;&#x4E3A;left=0%;center=50%;right=100%&#x800C;top center bottom&#x662F;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x53D6;&#x503C;,&#x5176;&#x4E2D;top=0%;center=50%;bottom=100%;<br>&#x5982;&#x679C;&#x53EA;&#x53D6;&#x4E00;&#x4E2A;&#x503C;,&#x8868;&#x793A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x503C;&#x4E0D;&#x53D8;</p>
+<p>&#x5B9E;&#x4F8B;<br>&#x65CB;&#x8F6C; div &#x5143;&#x7D20;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">div</div><div class="line">{</div><div class="line">transform:rotate(7deg);</div><div class="line">-ms-transform:rotate(7deg); 	/* IE 9 */</div><div class="line">-moz-transform:rotate(7deg); 	/* Firefox */</div><div class="line">-webkit-transform:rotate(7deg); /* Safari &#x548C; Chrome */</div><div class="line">-o-transform:rotate(7deg); 	/* Opera */</div><div class="line">}</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/27/css/Transform/" data-id="ciuxli0df001925nbz1seo230" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/29/HTML/position/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新</strong>
+      <div class="article-nav-title">
+        
+          position(定位)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/22/css/display/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">旧文章</strong>
+      <div class="article-nav-title">display 属性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Highcharts/">Highcharts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJs/">RequireJs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SASS/">SASS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bootstrap/">bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/sublime/">sublime</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/31/JQuery/nginx/">nginx 配置 location</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/10/JQuery/TimeDifference/">如何实现时间相减得到所需时差</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/29/JavaScript/sort/">Sort()排序</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/28/sublime/浏览器快捷键/">浏览器快捷键绑定</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/26/HTML/localStorage/">localstorage</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 小小鱼<br>
+      技术支持 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
