@@ -1680,7 +1680,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d005ff;
+  background: #1f8cff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2228,6 +2228,7 @@ a.search-result {
 }
 .category-all-page .category-list-item {
   margin: 5px 10px;
+  display: inline-block;
 }
 .category-all-page .category-list-count {
   color: #bbb;
