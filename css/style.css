@@ -1322,7 +1322,7 @@ pre .javascript .function {
   text-decoration: none;
 }
 .widget a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .widget ul ul,
 .widget ol ul,
