@@ -236,6 +236,176 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/20/JavaScript/JS转换时间戳/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/20/JavaScript/JS转换时间戳/" itemprop="url">
+                  JS转换时间戳
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-20T10:34:24+08:00">
+                2016-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h5 id="&#x65F6;&#x95F4;&#x6233;&#x662F;&#x6307;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;00&#x65F6;00&#x5206;00&#x79D2;&#x5317;&#x4EAC;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;08&#x65F6;00&#x5206;00&#x79D2;&#x8D77;&#x81F3;&#x73B0;&#x5728;&#x7684;&#x603B;&#x6BEB;&#x79D2;&#x6570;&#x3002;"><a href="#&#x65F6;&#x95F4;&#x6233;&#x662F;&#x6307;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;00&#x65F6;00&#x5206;00&#x79D2;&#x5317;&#x4EAC;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;08&#x65F6;00&#x5206;00&#x79D2;&#x8D77;&#x81F3;&#x73B0;&#x5728;&#x7684;&#x603B;&#x6BEB;&#x79D2;&#x6570;&#x3002;" class="headerlink" title="&#x65F6;&#x95F4;&#x6233;&#x662F;&#x6307;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;00&#x65F6;00&#x5206;00&#x79D2;&#x5317;&#x4EAC;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;08&#x65F6;00&#x5206;00&#x79D2;&#x8D77;&#x81F3;&#x73B0;&#x5728;&#x7684;&#x603B;&#x6BEB;&#x79D2;&#x6570;&#x3002;"></a>&#x65F6;&#x95F4;&#x6233;&#x662F;&#x6307;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;00&#x65F6;00&#x5206;00&#x79D2;&#x5317;&#x4EAC;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;08&#x65F6;00&#x5206;00&#x79D2;&#x8D77;&#x81F3;&#x73B0;&#x5728;&#x7684;&#x603B;&#x6BEB;&#x79D2;&#x6570;&#x3002;</h5><hr>
+<p>Unix&#x65F6;&#x95F4;&#x6233;(Unix timestamp)&#xFF0C;&#x6216;&#x79F0;Unix&#x65F6;&#x95F4;(Unix time)&#x3001;POSIX&#x65F6;&#x95F4;(POSIX time)&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x65F6;&#x95F4;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E3A;&#x4ECE;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;00&#x65F6;00&#x5206;00&#x79D2;&#x5317;&#x4EAC;&#x65F6;&#x95F4;1970&#x5E74;01&#x6708;01&#x65E5;08&#x65F6;00&#x5206;00&#x79D2;)&#x8D77;&#x81F3;&#x73B0;&#x5728;&#x7684;&#x603B;&#x79D2;&#x6570;&#x3002;Unix&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4EC5;&#x88AB;&#x4F7F;&#x7528;&#x5728;Unix&#x7CFB;&#x7EDF;&#x3001;&#x7C7B;Unix&#x7CFB;&#x7EDF;&#x4E2D;(&#x6BD4;&#x5982;Linux&#x7CFB;&#x7EDF;)&#xFF0C;&#x4E5F;&#x5728;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#x88AB;&#x5E7F;&#x6CDB;&#x91C7;&#x7528;&#x3002;</p>
+<p>php&#x4E2D;&#x83B7;&#x53D6;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;time();Date();<br>Linux&#x4E2D;&#x83B7;&#x53D6;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;date +%s<br>Linux&#x4E2D;&#x5C06;&#x65F6;&#x95F4;&#x6233;&#x8F6C;&#x6362;&#x4E3A;&#x65E5;&#x671F;&#xFF1A; date -d &#x201C;@<timestamp>&#x201C;</timestamp></p>
+<blockquote>
+<p>Date &#x5BF9;&#x8C61;</p>
+<hr>
+</blockquote>
+<p>Date &#x5BF9;&#x8C61;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x3002;<br>1.&#x521B;&#x5EFA; Date &#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myDate=new Date()</div></pre></td></tr></table></figure>
+<p>&#x6CE8;&#x91CA;&#xFF1A;Date &#x5BF9;&#x8C61;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x4FDD;&#x5B58;&#x4E3A;&#x5176;&#x521D;&#x59CB;&#x503C;&#x3002;</p>
+<blockquote>
+<p>Date &#x5BF9;&#x8C61;&#x5C5E;&#x6027;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th style="text-align:right"></th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td style="text-align:right">&#x8FD4;&#x56DE;&#x5BF9;&#x521B;&#x5EFA;&#x6B64;&#x5BF9;&#x8C61;&#x7684; Date &#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td style="text-align:right">&#x4F7F;&#x60A8;&#x6709;&#x80FD;&#x529B;&#x5411;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</td>
+</tr>
+</tbody>
+</table>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/20/JavaScript/JS转换时间戳/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/20/HTML/sessionStorage和localStorage/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -873,7 +1043,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -923,7 +1093,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

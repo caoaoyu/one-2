@@ -236,6 +236,430 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/29/JavaScript/sort/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/29/JavaScript/sort/" itemprop="url">
+                  Sort()排序
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-29T19:38:02+08:00">
+                2016-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<blockquote>
+<p>&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x8868;&#x683C;&#x6392;&#x5E8F;</p>
+</blockquote>
+<h5 id="&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;sort-&#x65B9;&#x6CD5;"><a href="#&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;sort-&#x65B9;&#x6CD5;" class="headerlink" title="&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;sort()&#x65B9;&#x6CD5;"></a>&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;sort()&#x65B9;&#x6CD5;</h5><h6 id="&#x5982;&#x679C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x6309;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8BF4;&#x5F97;&#x66F4;&#x7CBE;&#x786E;&#x70B9;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;"><a href="#&#x5982;&#x679C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x6309;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8BF4;&#x5F97;&#x66F4;&#x7CBE;&#x786E;&#x70B9;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;" class="headerlink" title="&#x5982;&#x679C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x6309;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8BF4;&#x5F97;&#x66F4;&#x7CBE;&#x786E;&#x70B9;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;"></a>&#x5982;&#x679C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x6309;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8BF4;&#x5F97;&#x66F4;&#x7CBE;&#x786E;&#x70B9;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;</h6><h6 id="&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x9996;&#x5148;&#x5E94;&#x628A;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5982;&#x6709;&#x5FC5;&#x8981;&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;"><a href="#&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x9996;&#x5148;&#x5E94;&#x628A;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5982;&#x6709;&#x5FC5;&#x8981;&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;" class="headerlink" title="&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x9996;&#x5148;&#x5E94;&#x628A;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5982;&#x6709;&#x5FC5;&#x8981;&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;"></a>&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x9996;&#x5148;&#x5E94;&#x628A;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5982;&#x6709;&#x5FC5;&#x8981;&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;</h6><h6 id="&#x5982;&#x679C;&#x60F3;&#x6309;&#x7167;&#x5176;&#x4ED6;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8981;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7684;"><a href="#&#x5982;&#x679C;&#x60F3;&#x6309;&#x7167;&#x5176;&#x4ED6;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8981;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7684;" class="headerlink" title="&#x5982;&#x679C;&#x60F3;&#x6309;&#x7167;&#x5176;&#x4ED6;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8981;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7684;"></a>&#x5982;&#x679C;&#x60F3;&#x6309;&#x7167;&#x5176;&#x4ED6;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8981;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7684;</h6><h6 id="&#x76F8;&#x5BF9;&#x987A;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;-a-&#x548C;-b&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5982;&#x4E0B;&#xFF1A;"><a href="#&#x76F8;&#x5BF9;&#x987A;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;-a-&#x548C;-b&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5982;&#x4E0B;&#xFF1A;" class="headerlink" title="&#x76F8;&#x5BF9;&#x987A;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570; a &#x548C; b&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5982;&#x4E0B;&#xFF1A;"></a>&#x76F8;&#x5BF9;&#x987A;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570; a &#x548C; b&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</h6><h6 id="&#x82E5;-a-&#x5C0F;&#x4E8E;-b&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x4E2D;-a-&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x5728;-b-&#x4E4B;&#x524D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E;-0-&#x7684;&#x503C;&#x3002;"><a href="#&#x82E5;-a-&#x5C0F;&#x4E8E;-b&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x4E2D;-a-&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x5728;-b-&#x4E4B;&#x524D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E;-0-&#x7684;&#x503C;&#x3002;" class="headerlink" title="&#x82E5; a &#x5C0F;&#x4E8E; b&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x4E2D; a &#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x5728; b &#x4E4B;&#x524D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E; 0 &#x7684;&#x503C;&#x3002;"></a>&#x82E5; a &#x5C0F;&#x4E8E; b&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x4E2D; a &#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x5728; b &#x4E4B;&#x524D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E; 0 &#x7684;&#x503C;&#x3002;</h6><h6 id="&#x82E5;-a-&#x7B49;&#x4E8E;-b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;-0&#x3002;"><a href="#&#x82E5;-a-&#x7B49;&#x4E8E;-b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;-0&#x3002;" class="headerlink" title="&#x82E5; a &#x7B49;&#x4E8E; b&#xFF0C;&#x5219;&#x8FD4;&#x56DE; 0&#x3002;"></a>&#x82E5; a &#x7B49;&#x4E8E; b&#xFF0C;&#x5219;&#x8FD4;&#x56DE; 0&#x3002;</h6><h6 id="&#x82E5;-a-&#x5927;&#x4E8E;-b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;-0-&#x7684;&#x503C;&#x3002;"><a href="#&#x82E5;-a-&#x5927;&#x4E8E;-b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;-0-&#x7684;&#x503C;&#x3002;" class="headerlink" title="&#x82E5; a &#x5927;&#x4E8E; b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E; 0 &#x7684;&#x503C;&#x3002;"></a>&#x82E5; a &#x5927;&#x4E8E; b&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E; 0 &#x7684;&#x503C;&#x3002;</h6>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/29/JavaScript/sort/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/28/sublime/浏览器快捷键/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/28/sublime/浏览器快捷键/" itemprop="url">
+                  浏览器快捷键绑定
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-28T14:10:14+08:00">
+                2016-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/sublime/" itemprop="url" rel="index">
+                    <span itemprop="name">sublime</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h5 id="&#x9996;&#x5148;&#x6253;&#x5F00;-Preferences"><a href="#&#x9996;&#x5148;&#x6253;&#x5F00;-Preferences" class="headerlink" title="&#x9996;&#x5148;&#x6253;&#x5F00; Preferences"></a>&#x9996;&#x5148;&#x6253;&#x5F00; Preferences</h5><h5 id="&#x6309;&#x952E;&#x7ED1;&#x5B9A;-&#x2013;-&#x7528;&#x6237;"><a href="#&#x6309;&#x952E;&#x7ED1;&#x5B9A;-&#x2013;-&#x7528;&#x6237;" class="headerlink" title="&#x6309;&#x952E;&#x7ED1;&#x5B9A; &#x2013;  &#x7528;&#x6237;"></a>&#x6309;&#x952E;&#x7ED1;&#x5B9A; &#x2013;  &#x7528;&#x6237;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[ { &quot;keys&quot;: [&quot;ctrl+shift+c&quot;], &quot;command&quot;: &quot;copy_path&quot; }, </div><div class="line">//firefox </div><div class="line">{ &quot;keys&quot;: [&quot;f1&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</div><div class="line"> { &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot;, </div><div class="line">//&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;</div><div class="line"></div><div class="line"> &quot;extensions&quot;:&quot;.*&quot; //&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x7C7B;&#x578B; </div><div class="line"> }</div><div class="line">},</div><div class="line">  //chrome </div><div class="line">{ &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</div><div class="line"> { &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;, &quot;extensions&quot;:&quot;.*&quot; //&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x7C7B;&#x578B; </div><div class="line"> }</div><div class="line">}</div><div class="line">  </div><div class="line">]</div></pre></td></tr></table></figure>
+
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/28/sublime/浏览器快捷键/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/26/HTML/localStorage/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/26/HTML/localStorage/" itemprop="url">
+                  localstorage
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-26T10:15:14+08:00">
+                2016-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5B58;&#x50A8;&#x8D26;&#x53F7;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8C03;&#x7528;"><a href="#&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5B58;&#x50A8;&#x8D26;&#x53F7;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8C03;&#x7528;" class="headerlink" title="&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5B58;&#x50A8;&#x8D26;&#x53F7;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8C03;&#x7528;"></a>&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5B58;&#x50A8;&#x8D26;&#x53F7;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x8C03;&#x7528;</h4><h5 id="&#x8BBE;&#x7F6E;localStorage&#xFF1A;"><a href="#&#x8BBE;&#x7F6E;localStorage&#xFF1A;" class="headerlink" title="&#x8BBE;&#x7F6E;localStorage&#xFF1A;"></a>&#x8BBE;&#x7F6E;localStorage&#xFF1A;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$.ajax({</div><div class="line">			url: &apos;cms/login/login.do&apos;,</div><div class="line">			type: &apos;get&apos;,</div><div class="line">			dataType: &apos;json&apos;, </div><div class="line">			data:data,</div><div class="line">			success: function(data) {</div><div class="line">				console.log(data.data.loginStatus)</div><div class="line">				if (data.code == 0) {</div><div class="line">					if (data.data.loginStatus == &quot;yes&quot;) {</div><div class="line">						location.href=&apos;index.html&apos;;</div><div class="line">						localStorage.setItem(&quot;acount&quot;,user_name);</div><div class="line">						}</div><div class="line">					}</div><div class="line">				}</div><div class="line">			});</div></pre></td></tr></table></figure>
+<h6 id="&#x5728;&#x522B;&#x7684;&#x9875;&#x9762;&#x8C03;&#x7528;&#xFF1A;"><a href="#&#x5728;&#x522B;&#x7684;&#x9875;&#x9762;&#x8C03;&#x7528;&#xFF1A;" class="headerlink" title="&#x5728;&#x522B;&#x7684;&#x9875;&#x9762;&#x8C03;&#x7528;&#xFF1A;"></a>&#x5728;&#x522B;&#x7684;&#x9875;&#x9762;&#x8C03;&#x7528;&#xFF1A;</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var Operator = localStorage.getItem(&apos;acount&apos;);</div></pre></td></tr></table></figure>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;HTML&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF1F;"><a href="#&#x4EC0;&#x4E48;&#x662F;HTML&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF1F;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;HTML&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF1F;"></a>&#x4EC0;&#x4E48;&#x662F;HTML&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF1F;</h4><h6 id="&#x5177;&#x6709;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x7528;&#x6237;&#x7684;&#x200B;&#x200B;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;"><a href="#&#x5177;&#x6709;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x7528;&#x6237;&#x7684;&#x200B;&#x200B;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;" class="headerlink" title="&#x5177;&#x6709;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x7528;&#x6237;&#x7684;&#x200B;&#x200B;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;"></a>&#x5177;&#x6709;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x7528;&#x6237;&#x7684;&#x200B;&#x200B;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;</h6><h6 id="HTML5&#x4E4B;&#x524D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x88AB;&#x5B58;&#x50A8;&#x5728;cookie&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x3002;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x66F4;&#x5B89;&#x5168;&#xFF0C;&#x4EE5;&#x53CA;&#x5927;&#x91CF;&#x7684;&#x6570;"><a href="#HTML5&#x4E4B;&#x524D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x88AB;&#x5B58;&#x50A8;&#x5728;cookie&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x3002;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x66F4;&#x5B89;&#x5168;&#xFF0C;&#x4EE5;&#x53CA;&#x5927;&#x91CF;&#x7684;&#x6570;" class="headerlink" title="HTML5&#x4E4B;&#x524D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x88AB;&#x5B58;&#x50A8;&#x5728;cookie&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x3002;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x66F4;&#x5B89;&#x5168;&#xFF0C;&#x4EE5;&#x53CA;&#x5927;&#x91CF;&#x7684;&#x6570;"></a>HTML5&#x4E4B;&#x524D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x88AB;&#x5B58;&#x50A8;&#x5728;cookie&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x3002;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x66F4;&#x5B89;&#x5168;&#xFF0C;&#x4EE5;&#x53CA;&#x5927;&#x91CF;&#x7684;&#x6570;</h6><h6 id="&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x7F51;&#x7AD9;&#x6027;&#x80FD;&#x3002;&#x4E0D;&#x50CF;cookie&#xFF0C;&#x5B58;&#x50A8;&#x9650;&#x5236;&#x662F;&#x5927;&#x5F97;&#x591A;&#xFF08;&#x81F3;&#x5C11;5MB&#xFF09;&#x548C;&#x4FE1;&#x606F;&#x4E0D;&#x4F1A;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;"><a href="#&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x7F51;&#x7AD9;&#x6027;&#x80FD;&#x3002;&#x4E0D;&#x50CF;cookie&#xFF0C;&#x5B58;&#x50A8;&#x9650;&#x5236;&#x662F;&#x5927;&#x5F97;&#x591A;&#xFF08;&#x81F3;&#x5C11;5MB&#xFF09;&#x548C;&#x4FE1;&#x606F;&#x4E0D;&#x4F1A;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;" class="headerlink" title="&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x7F51;&#x7AD9;&#x6027;&#x80FD;&#x3002;&#x4E0D;&#x50CF;cookie&#xFF0C;&#x5B58;&#x50A8;&#x9650;&#x5236;&#x662F;&#x5927;&#x5F97;&#x591A;&#xFF08;&#x81F3;&#x5C11;5MB&#xFF09;&#x548C;&#x4FE1;&#x606F;&#x4E0D;&#x4F1A;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;"></a>&#x636E;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x7F51;&#x7AD9;&#x6027;&#x80FD;&#x3002;&#x4E0D;&#x50CF;cookie&#xFF0C;&#x5B58;&#x50A8;&#x9650;&#x5236;&#x662F;&#x5927;&#x5F97;&#x591A;&#xFF08;&#x81F3;&#x5C11;5MB&#xFF09;&#x548C;&#x4FE1;&#x606F;&#x4E0D;&#x4F1A;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x3002;</h6><h6 id="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x662F;&#x6BCF;&#x539F;&#x70B9;&#xFF08;&#x6BCF;&#x4E2A;&#x57DF;&#x548C;&#x534F;&#x8BAE;&#xFF09;&#x3002;&#x6240;&#x6709;&#x7F51;&#x9875;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x8D77;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x548C;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;"><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x662F;&#x6BCF;&#x539F;&#x70B9;&#xFF08;&#x6BCF;&#x4E2A;&#x57DF;&#x548C;&#x534F;&#x8BAE;&#xFF09;&#x3002;&#x6240;&#x6709;&#x7F51;&#x9875;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x8D77;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x548C;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;" class="headerlink" title="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x662F;&#x6BCF;&#x539F;&#x70B9;&#xFF08;&#x6BCF;&#x4E2A;&#x57DF;&#x548C;&#x534F;&#x8BAE;&#xFF09;&#x3002;&#x6240;&#x6709;&#x7F51;&#x9875;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x8D77;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x548C;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;"></a>&#x672C;&#x5730;&#x5B58;&#x50A8;&#x662F;&#x6BCF;&#x539F;&#x70B9;&#xFF08;&#x6BCF;&#x4E2A;&#x57DF;&#x548C;&#x534F;&#x8BAE;&#xFF09;&#x3002;&#x6240;&#x6709;&#x7F51;&#x9875;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x8D77;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x548C;&#x8BBF;&#x95EE;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;</h6>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/26/HTML/localStorage/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/22/JavaScript/transformationString/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1312,460 +1736,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/29/JavaScript/console.log/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/29/JavaScript/console.log/" itemprop="url">
-                  console.log()用法小结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-29T18:36:14+08:00">
-                2016-08-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="&#x5BF9;&#x4E8E;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x8BD5;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;alert-&#xFF0C;&#x4F7F;&#x7528;console-log-&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;alert-&#x51FD;&#x6570;&#x4F1A;&#x963B;&#x65AD;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x526F;&#x4F5C;&#x7528;&#xFF1B;&#x800C;console-log-&#x4EC5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x7C7B;&#x4F3C;&#x7684;&#x987E;&#x8651;"><a href="#&#x5BF9;&#x4E8E;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x8BD5;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;alert-&#xFF0C;&#x4F7F;&#x7528;console-log-&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;alert-&#x51FD;&#x6570;&#x4F1A;&#x963B;&#x65AD;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x526F;&#x4F5C;&#x7528;&#xFF1B;&#x800C;console-log-&#x4EC5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x7C7B;&#x4F3C;&#x7684;&#x987E;&#x8651;" class="headerlink" title="&#x5BF9;&#x4E8E;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x8BD5;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;alert()&#xFF0C;&#x4F7F;&#x7528;console.log()&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;alert()&#x51FD;&#x6570;&#x4F1A;&#x963B;&#x65AD;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x526F;&#x4F5C;&#x7528;&#xFF1B;&#x800C;console.log()&#x4EC5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x7C7B;&#x4F3C;&#x7684;&#x987E;&#x8651;"></a>&#x5BF9;&#x4E8E;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x8C03;&#x8BD5;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;alert()&#xFF0C;&#x4F7F;&#x7528;console.log()&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;alert()&#x51FD;&#x6570;&#x4F1A;&#x963B;&#x65AD;JavaScript&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x526F;&#x4F5C;&#x7528;&#xFF1B;&#x800C;console.log()&#x4EC5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x7C7B;&#x4F3C;&#x7684;&#x987E;&#x8651;</h5><hr>
-<h5 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;console-log-&#xFF1F;"><a href="#&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;console-log-&#xFF1F;" class="headerlink" title="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;console.log()&#xFF1F;"></a>&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;console.log()&#xFF1F;</h5><p>&#x9664;&#x4E86;&#x4E00;&#x4E9B;&#x5F88;&#x8001;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x73B0;&#x4ECA;&#x5927;&#x591A;&#x6570;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x81EA;&#x5E26;&#x8C03;&#x8BD5;&#x529F;&#x80FD;&#xFF1B;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x529F;&#x80FD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;<br>&#x901A;&#x8FC7;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x8865;&#x5145;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8001;&#x7248;&#x672C;&#x7684;Firefox&#x6CA1;&#x6709;&#x81EA;&#x5E26;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<br>&#x5B89;&#x88C5;Firebug&#x63D2;&#x4EF6;&#x6765;&#x6DFB;&#x52A0;&#x8C03;&#x8BD5;&#x529F;&#x80FD;&#x3002;&#x5728;&#x5177;&#x5907;&#x8C03;&#x8BD5;&#x529F;&#x80FD;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#xFF0C;window&#x5BF9;&#x8C61;&#x4E2D;&#x4F1A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;console&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x6307;&#x4EE3;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x4E2D;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x3002;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BE5;console&#x5BF9;&#x8C61;&#x7684;log()<br>&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x4FE1;&#x606F;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5C06;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;&#x201D;Sample log&#x201D;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.console.log(&quot;Sample log&quot;);</div></pre></td></tr></table></figure></p>
-<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;Windows&#x5BF9;&#x8C61;&#x7B80;&#x5199;&#x4E3A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(&quot;Sample log&quot;);</div></pre></td></tr></table></figure>
-<p>console.log()&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x5B57;&#x548C;JavaScript&#x5BF9;&#x8C61;&#x3002;&#x4E0E;alert()&#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;console.log()&#x4E5F;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x6362;&#x884C;&#x7B26;\n&#x4EE5;&#x53CA;&#x5236;&#x8868;&#x7B26;\t&#x3002;console.log()&#x8BED;&#x53E5;&#x6240;&#x6253;&#x5370;&#x7684;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x770B;&#x5230;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;console.log()&#x884C;&#x4E3A;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0D;&#x540C;    </p>
-<h5 id="&#x4E8C;&#x3001;&#x517C;&#x5BB9;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x6D4F;&#x89C8;&#x5668;"><a href="#&#x4E8C;&#x3001;&#x517C;&#x5BB9;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x6D4F;&#x89C8;&#x5668;" class="headerlink" title="&#x4E8C;&#x3001;&#x517C;&#x5BB9;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x6D4F;&#x89C8;&#x5668;"></a>&#x4E8C;&#x3001;&#x517C;&#x5BB9;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x6D4F;&#x89C8;&#x5668;</h5><p>&#x5BF9;&#x4E8E;&#x7F3A;&#x5C11;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8001;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;window&#x4E2D;&#x7684;console&#x5BF9;&#x8C61;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x56E0;&#x6B64;&#x76F4;&#x63A5;&#x4F7F;&#x7528;console.log()&#x8BED;&#x53E5;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5185;&#x90E8;&#x9020;&#x6210;&#x9519;&#x8BEF;(&#x7A7A;&#x6307;&#x9488;&#x9519;&#x8BEF;)&#xFF0C;&#x5E76;&#x6700;&#x7EC8;&#x5BFC;&#x81F4;&#x67D0;&#x4E9B;&#x8001;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5D29;&#x6E83;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x4EBA;&#x4E3A;&#x5B9A;&#x4E49;console&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x58F0;&#x660E;&#x8BE5;console&#x5BF9;&#x8C61;&#x7684;log&#x51FD;&#x6570;&#x4E3A;&#x7A7A;&#x51FD;&#x6570;&#xFF1B;&#x8FD9;&#x6837;&#xFF0C;&#x5F53;console.log()&#x8BED;&#x53E5;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x8001;&#x7248;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x4E0D;&#x4F1A;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if(!window.console){</div><div class="line">  window.console = {log : function(){}};</div><div class="line">}</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/29/JavaScript/console.log/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/29/HTML/time/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/29/HTML/time/" itemprop="url">
-                  日期和时间戳相互转换
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-29T10:12:18+08:00">
-                2016-08-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<blockquote>
-<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x5E74;&#x6708;&#x65E5;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function mytime() {</div><div class="line"></div><div class="line">        var mys     = new Date();       </div><div class="line"></div><div class="line">        var years    = mys.getFullYear();       </div><div class="line"></div><div class="line">        var months   = mys.getMonth() + 1;</div><div class="line"></div><div class="line">        var days     = mys.getDate();</div><div class="line"></div><div class="line">        var mytime = years + &quot;-&quot; + months + &quot;-&quot; + days;</div><div class="line">        return mytime;   </div><div class="line"></div><div class="line">}</div><div class="line">var newtime = mytime();</div><div class="line">$(&apos;#dt&apos;).val(newtime);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>&#x683C;&#x5F0F;&#x65F6;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x95F4;&#x6233;  </p>
-</blockquote>
-<figure class="highlight plain"><figcaption><span>nowtime() {</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x5E74;&#x6708;&#x65E5;</div><div class="line"></div><div class="line">        var nows     = new Date();       </div><div class="line"></div><div class="line">        var years    = nows.getFullYear();       </div><div class="line"></div><div class="line">        var months   = nows.getMonth() + 1;</div><div class="line"></div><div class="line">        var days     = nows.getDate();</div><div class="line"></div><div class="line">        var nowtimes = years + &quot;-&quot; + months + &quot;-&quot; + days;//&#x5F53;&#x524D;&#x7684;&#x683C;&#x5F0F;&#x65F6;&#x95F4;</div><div class="line"></div><div class="line">//&#x5904;&#x7406;&#x5F97;&#x5230;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;</div><div class="line"></div><div class="line">        var now_str = nowtimes.replace(/:/g, &apos;-&apos;);//&#x5904;&#x7406;&#x7684;&#x65F6;&#x5206;&#x79D2;&#xFF08;&#x8FD9;&#x4E2A;&#x6839;&#x636E;&#x9700;&#x8981;&#x9009;&#x62E9;&#xFF09;        now_str = now_str.replace(/ /g, &apos;-&apos;);//&#x5904;&#x7406;&#x7A7A;&#x683C;       </div><div class="line"></div><div class="line">        var arrs    = now_str.split(&quot;-&quot;);//&#x5206;&#x5272;&#x6210;&#x6570;&#x7EC4;       </div><div class="line"></div><div class="line">        var datums  = new Date(Date.UTC(arrs[0], arrs[1] - 1, arrs[2]));       </div><div class="line"></div><div class="line">        var nowtime = datums.getTime();//&#x683C;&#x5F0F;&#x65F6;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x95F4;&#x6233;       </div><div class="line"></div><div class="line">        return nowtime;   </div><div class="line"></div><div class="line">}</div><div class="line">console.log(nowtime());</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line"> 	var stringTime = $(&apos;#dt&apos;).val();</div><div class="line"></div><div class="line">	var timestamp2 = Date.parse(new Date(stringTime));</div><div class="line">	var stringTime1 = $(&apos;#dM&apos;).val();</div><div class="line">	var timestamp3 = Date.parse(new Date(stringTime1));</div><div class="line">		  if (timestamp3 &lt;  timestamp2) {</div><div class="line">		  		$(&apos;#dM&apos;).val(&quot;&quot;);</div><div class="line">}</div><div class="line">});</div><div class="line">console.log(stringTime + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp2);</div><div class="line">console.log(stringTime1 + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp3);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">	var myDate=new Date()</div><div class="line">	myDate.setDate(myDate.getDate()-30)</div><div class="line">	var years    = myDate.getFullYear();       </div><div class="line"></div><div class="line">       var months   = myDate.getMonth() + 1;</div><div class="line"></div><div class="line">       var days     = myDate.getDate();</div><div class="line"></div><div class="line">       var oldtime = years + &quot;-&quot; + months + &quot;-&quot; + days;</div><div class="line">	$(&apos;#dt&apos;).val(oldtime);</div><div class="line">	$(&apos;#dM&apos;).val(newtime);</div><div class="line"></div><div class="line">});</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;(&#x4EE5;s&#x4E3A;&#x5355;&#x4F4D;)</div><div class="line">var timestamp = Date.parse(new Date());</div><div class="line">timestamp = timestamp / 1000;</div><div class="line">//&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1403149534</div><div class="line">console.log(&quot;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp);</div><div class="line"></div><div class="line">// &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x7684;&#x65F6;&#x95F4;&#x6233;</div><div class="line">var stringTime = &quot;2014-07-10 10:21:12&quot;;</div><div class="line">var timestamp2 = Date.parse(new Date(stringTime));</div><div class="line">timestamp2 = timestamp2 / 1000;</div><div class="line">//2014-07-10 10:21:12&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1404958872 </div><div class="line">console.log(stringTime + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp2);</div><div class="line"></div><div class="line">// &#x5C06;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6362;&#x6210;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;</div><div class="line">var timestamp3 = 1403058804;</div><div class="line">var newDate = new Date();</div><div class="line">newDate.setTime(timestamp3 * 1000);</div><div class="line">// Wed Jun 18 2014 </div><div class="line">console.log(newDate.toDateString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT </div><div class="line">console.log(newDate.toGMTString());</div><div class="line">// 2014-06-18T02:33:24.000Z</div><div class="line">console.log(newDate.toISOString());</div><div class="line">// 2014-06-18T02:33:24.000Z </div><div class="line">console.log(newDate.toJSON());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; </div><div class="line">console.log(newDate.toLocaleDateString());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleString());</div><div class="line">// &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleTimeString());</div><div class="line">// Wed Jun 18 2014 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;)</div><div class="line">console.log(newDate.toString());</div><div class="line">// 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;) </div><div class="line">console.log(newDate.toTimeString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT</div><div class="line">console.log(newDate.toUTCString());</div><div class="line"></div><div class="line">Date.prototype.format = function(format) {</div><div class="line">       var date = {</div><div class="line">              &quot;M+&quot;: this.getMonth() + 1,</div><div class="line">              &quot;d+&quot;: this.getDate(),</div><div class="line">              &quot;h+&quot;: this.getHours(),</div><div class="line">              &quot;m+&quot;: this.getMinutes(),</div><div class="line">              &quot;s+&quot;: this.getSeconds(),</div><div class="line">              &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3),</div><div class="line">              &quot;S+&quot;: this.getMilliseconds()</div><div class="line">       };</div><div class="line">       if (/(y+)/i.test(format)) {</div><div class="line">              format = format.replace(RegExp.$1, (this.getFullYear() + &apos;&apos;).substr(4 - RegExp.$1.length));</div><div class="line">       }</div><div class="line">       for (var k in date) {</div><div class="line">              if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(format)) {</div><div class="line">                     format = format.replace(RegExp.$1, RegExp.$1.length == 1</div><div class="line">                            ? date[k] : (&quot;00&quot; + date[k]).substr((&quot;&quot; + date[k]).length));</div><div class="line">              }</div><div class="line">       }</div><div class="line">       return format;</div><div class="line">}</div><div class="line">console.log(newDate.format(&apos;yyyy-MM-dd h:m:s&apos;));</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/29/HTML/time/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/24/Highcharts/hi/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/24/Highcharts/hi/" itemprop="url">
-                  Highcharts使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-24T18:46:42+08:00">
-                2016-08-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Highcharts/" itemprop="url" rel="index">
-                    <span itemprop="name">Highcharts</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<blockquote>
-<p>&#x5728;webpack&#x6253;&#x5305;&#x73AF;&#x5883;&#x4E0B;&#x4F7F;&#x7528;Highcharts</p>
-</blockquote>
-<p><a href="http://www.highcharts.com/" target="_blank" rel="external">Highcharts&#x5B98;&#x7F51;</a></p>
-<blockquote>
-<p>Highcharts&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
-</blockquote>
-<p>Highcharts &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x7EAF;JavaScript&#x7F16;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x56FE;&#x8868;&#x5E93;, &#x80FD;&#x591F;&#x5F88;&#x7B80;&#x5355;&#x4FBF;&#x6377;&#x7684;&#x5728;web&#x7F51;&#x7AD9;&#x6216;&#x662F;web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6DFB;&#x52A0;&#x6709;&#x4EA4;&#x4E92;&#x6027;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x4E14;&#x514D;&#x8D39;&#x63D0;&#x4F9B;&#x7ED9;&#x4E2A;&#x4EBA;&#x5B66;&#x4E60;&#x3001;&#x4E2A;&#x4EBA;&#x7F51;&#x7AD9;&#x548C;&#x975E;&#x5546;&#x4E1A;&#x7528;&#x9014;&#x4F7F;&#x7528;&#x3002;&#x76EE;&#x524D;HighCharts&#x652F;&#x6301;&#x7684;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x6709;&#x66F2;&#x7EBF;&#x56FE;&#x3001;&#x533A;&#x57DF;&#x56FE;&#x3001;&#x67F1;&#x72B6;&#x56FE;&#x3001;&#x997C;&#x72B6;&#x56FE;&#x3001;&#x6563;&#x72B6;&#x70B9;&#x56FE;&#x548C;&#x7EFC;&#x5408;&#x56FE;&#x8868;&#x3002;</p>
-<p>HighCharts&#x754C;&#x9762;&#x7F8E;&#x89C2;&#xFF0C;&#x7531;&#x4E8E;&#x4F7F;&#x7528;JavaScript&#x7F16;&#x5199;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x50CF;Flash&#x548C;Java&#x90A3;&#x6837;&#x9700;&#x8981;&#x63D2;&#x4EF6;&#x624D;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x4E14;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x5FEB;&#x3002;&#x53E6;&#x5916;HighCharts&#x8FD8;&#x6709;&#x5F88;&#x597D;&#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF0C;&#x80FD;&#x591F;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x5F53;&#x524D;&#x5927;&#x591A;&#x6570;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
-<blockquote>
-<p>&#x4EC0;&#x4E48;&#x662F;SVG</p>
-</blockquote>
-<p>&#x4ECE;highcharts&#x7684;&#x63CF;&#x8FF0;&#x4E2D;&#x5F97;&#x77E5;&#x662F;&#x4E00;&#x6B3E;&#x7EAF;JS&#x7F16;&#x5199;&#x7684;&#x56FE;&#x8868;&#x63D2;&#x4EF6;&#xFF0C;canvas&#x6B63;&#x662F;SVG&#x7684;&#x4E00;&#x79CD;&#x6807;&#x7B7E;&#xFF0C;HTML5&#x7684;canvas&#x3002;&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x662F;SVG&#x5462;&#xFF1F;</p>
-<p>&#x53EF;&#x7F29;&#x653E;&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#xFF08;Scalable Vector Graphics&#xFF0C;SVG&#xFF09;&#x662F;&#x57FA;&#x4E8E;&#x53EF;&#x6269;&#x5C55;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#xFF08;XML&#xFF09;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x4E8C;&#x7EF4;&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#x7684;&#x4E00;&#x79CD;&#x56FE;&#x5F62;&#x683C;&#x5F0F;&#x3002;SVG&#x7531;W3C&#x5236;&#x5B9A;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6807;&#x51C6;&#x3002;&#x3002;<br>&#x73B0;&#x5728;&#x65B0;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x5185;&#x7F6E;&#x652F;&#x6301;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8001;&#x4E00;&#x70B9;&#x7684;IE&#x8981;&#x4E0B;&#x8F7D;&#x63A7;&#x4EF6;&#x624D;&#x884C;&#x3002;&#x53CB;&#x60C5;&#x63D0;&#x793A;&#xFF1A;&#x79FB;&#x52A8;&#x7AEF;HIGHCHARTS&#x7A0D;&#x5361;&#xFF0C;&#x6240;&#x4EE5;SVG&#x76EE;&#x524D;&#x4E5F;&#x5C31;&#x53EA;&#x80FD;&#x505A;&#x505A;&#x56FE;&#x8868;&#x4E86;&#xFF0C;&#x5207;&#x52FF;&#x5728;&#x624B;&#x673A;&#x4E0A;&#x5C1D;&#x8BD5;SVG&#x505A;&#x5927;&#x578B;&#x7684;&#x56FE;&#x8868;&#x3002;</p>
-<blockquote>
-<p>highcharts&#x753B;&#x56FE;&#x539F;&#x7406;</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/24/Highcharts/hi/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1811,7 +1781,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1861,7 +1831,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
