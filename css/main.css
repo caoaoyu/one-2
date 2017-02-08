@@ -663,6 +663,13 @@ pre .javascript .function {
     margin: 0 -13%;
   }
 }
+.text-center {
+  position: relative;
+  position: relative;
+  margin-bottom: 25px;
+  padding: 0;
+  text-align: center;
+}
 .blockquote-center,
 .page-home .post-type-quote blockquote,
 .page-post-detail .post-type-quote blockquote {
@@ -1680,7 +1687,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #de0a0a;
+  background: #58f252;
 }
 .links-of-blogroll {
   font-size: 13px;
