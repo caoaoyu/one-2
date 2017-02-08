@@ -1,0 +1,768 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Function &amp;#x6784;&amp;#x9020;&amp;#x5668;&amp;#x4F1A;&amp;#x521B;&amp;#x5EFA;&amp;#x4E00;&amp;#x4E2A;&amp;#x65B0;&amp;#x7684; Function &amp;#x5BF9;&amp;#x8C61;&amp;#x3002; &amp;#x5728; JavaScript&amp;#x4E2D;&amp;#x6BCF;&amp;#x4E2A;&amp;#x51FD;&amp;#x6570;&amp;#x90FD;&amp;#x662F;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="function">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/JavaScript/Function/index.html">
+<meta property="og:site_name" content="鱼儿游啊游">
+<meta property="og:description" content="Function &amp;#x6784;&amp;#x9020;&amp;#x5668;&amp;#x4F1A;&amp;#x521B;&amp;#x5EFA;&amp;#x4E00;&amp;#x4E2A;&amp;#x65B0;&amp;#x7684; Function &amp;#x5BF9;&amp;#x8C61;&amp;#x3002; &amp;#x5728; JavaScript&amp;#x4E2D;&amp;#x6BCF;&amp;#x4E2A;&amp;#x51FD;&amp;#x6570;&amp;#x90FD;&amp;#x662F;&amp;">
+<meta property="og:updated_time" content="2017-02-08T05:05:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="function">
+<meta name="twitter:description" content="Function &amp;#x6784;&amp;#x9020;&amp;#x5668;&amp;#x4F1A;&amp;#x521B;&amp;#x5EFA;&amp;#x4E00;&amp;#x4E2A;&amp;#x65B0;&amp;#x7684; Function &amp;#x5BF9;&amp;#x8C61;&amp;#x3002; &amp;#x5728; JavaScript&amp;#x4E2D;&amp;#x6BCF;&amp;#x4E2A;&amp;#x51FD;&amp;#x6570;&amp;#x90FD;&amp;#x662F;&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/JavaScript/Function/"/>
+
+
+
+
+
+  <title> function | 鱼儿游啊游 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">鱼儿游啊游</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/JavaScript/Function/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                function
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T13:05:05+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h6 id="Function-&#x6784;&#x9020;&#x5668;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;-Function-&#x5BF9;&#x8C61;&#x3002;-&#x5728;-JavaScript&#x4E2D;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x4E00;&#x4E2A;Function&#x5BF9;&#x8C61;&#x3002;"><a href="#Function-&#x6784;&#x9020;&#x5668;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;-Function-&#x5BF9;&#x8C61;&#x3002;-&#x5728;-JavaScript&#x4E2D;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x4E00;&#x4E2A;Function&#x5BF9;&#x8C61;&#x3002;" class="headerlink" title="Function &#x6784;&#x9020;&#x5668;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Function &#x5BF9;&#x8C61;&#x3002; &#x5728; JavaScript&#x4E2D;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x4E00;&#x4E2A;Function&#x5BF9;&#x8C61;&#x3002;"></a>Function &#x6784;&#x9020;&#x5668;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Function &#x5BF9;&#x8C61;&#x3002; &#x5728; JavaScript&#x4E2D;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x4E00;&#x4E2A;Function&#x5BF9;&#x8C61;&#x3002;</h6><div class="text-center"> &#x6784;&#x9020;&#x5668; </div>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new Function ([arg1[, arg2[, ...argN]],] functionBody)</div></pre></td></tr></table></figure>
+<hr>
+<div class="text-center"> &#x53C2;&#x6570; </div>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">(arg1, arg2, ... argN)</div></pre></td></tr></table></figure>
+<hr>
+<p>&#x88AB;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x7684;&#x53C2;&#x6570;&#x7684;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x662F;&#x5408;&#x6CD5;&#x547D;&#x540D;&#x7684;&#x3002;&#x53C2;&#x6570;&#x540D;&#x79F0;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;JavaScript&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x6709;&#x6548;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5217;&#x8868;;&#x4F8B;&#x5982;&#x201C;&#xD7;&#x201D;&#xFF0C;&#x201C;theValue&#x201D;&#xFF0C;&#x6216;&#x201C;A&#xFF0C;B&#x201D;&#x3002;</p>
+<div class="text-center"> functionBody </div>
+
+<p>&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x5305;&#x62EC;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;JavaScript&#x8BED;&#x53E5;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<div class="text-center"> &#x63CF;&#x8FF0; </div>
+
+<p>&#x4F7F;&#x7528;Function&#x6784;&#x9020;&#x5668;&#x751F;&#x6210;&#x7684;Function&#x5BF9;&#x8C61;&#x662F;&#x5728;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x65F6;&#x89E3;&#x6790;&#x7684;&#x3002;&#x8FD9;&#x6BD4;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x6216;&#x8005;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;(function)&#x5E76;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x66F4;&#x4E3A;&#x4F4E;&#x6548;&#xFF0C;&#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x540E;&#x8005;&#x521B;&#x5EFA;&#x7684;&#x51FD;&#x6570;&#x662F;&#x8DDF;&#x5176;&#x4ED6;&#x4EE3;&#x7801;&#x4E00;&#x8D77;&#x89E3;&#x6790;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x88AB;&#x4F20;&#x9012;&#x5230;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x90FD;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x76F8;&#x540C;&#x7684;&#x6807;&#x793A;&#x7B26;&#x540D;&#x79F0;&#x548C;&#x4F20;&#x9012;&#x987A;&#x5E8F;</p>
+<p>&#x4F7F;&#x7528;Function&#x6784;&#x9020;&#x5668;&#x751F;&#x6210;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x521B;&#x5EFA;&#x5B83;&#x4EEC;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x521B;&#x5EFA;&#x95ED;&#x5305;&#xFF1B;&#x5B83;&#x4EEC;&#x4E00;&#x822C;&#x5728;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x88AB;&#x521B;&#x5EFA;&#x3002;&#x5F53;&#x8FD0;&#x884C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4EEC;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x81EA;&#x5DF1;&#x7684;&#x672C;&#x5730;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;Function&#x6784;&#x9020;&#x5668;&#x88AB;&#x8C03;&#x7528;&#x751F;&#x6210;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x8FD9;&#x548C;&#x4F7F;&#x7528;&#x5E26;&#x6709;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x4EE3;&#x7801;&#x7684; eval &#x4E0D;&#x540C;&#x3002;</p>
+<div class="text-center"> &#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5; </div>
+
+<p>&#x5168;&#x5C40;&#x7684;Function&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;,&#x4F46;&#x662F;,&#x56E0;&#x4E3A;&#x5B83;&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;&#x539F;&#x578B;&#x94FE;&#x4ECE;Function.prototype&#x4E0A;&#x7EE7;&#x627F;&#x90E8;&#x5206;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x539F;&#x578B;&#x5BF9;&#x8C61;</th>
+<th style="text-align:right"></th>
+<th>&#x5C5E;&#x6027;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function.arguments</td>
+<td style="text-align:right">&#x4EE5;&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x83B7;&#x53D6;&#x4F20;&#x5165;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#x3002;&#x6B64;&#x5C5E;&#x6027;&#x5DF2;&#x88AB;arguments&#x66FF;&#x4EE3;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.arity</td>
+<td style="text-align:right">&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4F46;&#x5DF2;&#x88AB;&#x5220;&#x9664;&#x3002;&#x4F7F;&#x7528;length&#x5C5E;&#x6027;&#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.caller</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.length</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x4E2A;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.name</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.displayName</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;display name&#x3002;</td>
+</tr>
+<tr>
+<td>Function.prototype.constructor</td>
+<td style="text-align:right">&#x58F0;&#x660E;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF7;&#x53C2;&#x8003; Object.constructor &#x3002;</td>
+</tr>
+</tbody>
+</table>
+<div class="text-center"> &#x65B9;&#x6CD5; </div>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function.prototype.apply()</td>
+<td style="text-align:right">&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x5E94;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF1B;&#x53C2;&#x6570;&#x80FD;&#x591F;&#x4EE5;&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.prototype.bind()</td>
+<td style="text-align:right">bind()&#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570;,&#x79F0;&#x4E3A;&#x7ED1;&#x5B9A;&#x51FD;&#x6570;.&#x5F53;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x7ED1;&#x5B9A;&#x51FD;&#x6570;&#x65F6;,&#x7ED1;&#x5B9A;&#x51FD;&#x6570;&#x4F1A;&#x4EE5;&#x521B;&#x5EFA;&#x5B83;&#x65F6;&#x4F20;&#x5165; bind()&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F5C;&#x4E3A; this,&#x4F20;&#x5165; bind()&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x4EE5;&#x53CA;&#x4EE5;&#x540E;&#x7684;&#x53C2;&#x6570;&#x52A0;&#x4E0A;&#x7ED1;&#x5B9A;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#x65F6;&#x672C;&#x8EAB;&#x7684;&#x53C2;&#x6570;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x4F5C;&#x4E3A;&#x539F;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x6765;&#x8C03;&#x7528;&#x539F;&#x51FD;&#x6570;.</td>
+</tr>
+<tr>
+<td>Function.prototype.call()</td>
+<td style="text-align:right">&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x5E94;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF1B;&#x53C2;&#x6570;&#x80FD;&#x591F;&#x4EE5;&#x5217;&#x8868;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.prototype.isGenerator()</td>
+<td style="text-align:right">&#x82E5;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x4E3A;generator&#xFF0C;&#x8FD4;&#x56DE;true&#xFF0C;&#x53CD;&#x4E4B;&#x8FD4;&#x56DE; false&#x3002;</td>
+</tr>
+<tr>
+<td>Function.prototype.toSource()</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x6E90;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8986;&#x76D6;&#x4E86;Object.prototype.toSource &#x65B9;&#x6CD5;&#x3002;</td>
+</tr>
+<tr>
+<td>Function.prototype.toString()</td>
+<td style="text-align:right">&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x6E90;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8986;&#x76D6;&#x4E86;Object.prototype.toString &#x65B9;&#x6CD5;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<div class="text-center"> &#x793A;&#x4F8B; </div>
+
+
+<p>&#x4F20;&#x5165;&#x53C2;&#x6570;&#x8C03;&#x7528;Function&#x6784;&#x9020;&#x51FD;&#x6570;<br>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684;Function&#x5BF9;&#x8C61;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// &#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x80FD;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x548C;&#x7684;&#x51FD;&#x6570;</div><div class="line">var adder = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;);</div><div class="line"></div><div class="line">// &#x8C03;&#x7528;&#x51FD;&#x6570;</div><div class="line">adder(2, 6);</div><div class="line">//  8</div></pre></td></tr></table></figure>
+<p>&#x53C2;&#x6570;&#x201D;a&#x201D;&#x548C;&#x201D;b&#x201D;&#x662F;&#x53C2;&#x6570;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x201D;return a + b&#x201D;&#x3002;</p>
+<hr>
+<div class="text-center"> &#x5927;&#x91CF;&#x4FEE;&#x6539;DOM&#x5143;&#x7D20;&#x7684;&#x9012;&#x5F52;&#x5FEB;&#x6377;&#x65B9;&#x5F0F; </div>
+
+
+<p>&#x4F7F;&#x7528; Function &#x6784;&#x9020;&#x5668;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x662F;&#x4ECE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x52A8;&#x6001;&#x5730;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;&#x4E0D;&#x786E;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6709;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x5728;&#x5168;&#x5C40;&#x8303;&#x56F4;&#x91CC;&#x53EF;&#x7528;&#x7684;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x4E4B;&#x4E00;&#x3002;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x95ED;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x67E5;&#x8BE2;&#x51FD;&#x6570;&#x90FD;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x5730;&#x8981;&#x8C03;&#x7528; Function &#x6784;&#x9020;&#x5668;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var domQuery = (function() {</div><div class="line">  var aDOMFunc = [</div><div class="line">        Element.prototype.removeAttribute,</div><div class="line">        Element.prototype.setAttribute,</div><div class="line">        CSSStyleDeclaration.prototype.removeProperty,</div><div class="line">        CSSStyleDeclaration.prototype.setProperty</div><div class="line">      ];</div><div class="line"></div><div class="line">  function setSomething (bStyle, sProp, sVal) {</div><div class="line">    var  bSet = Boolean(sVal), fAction = aDOMFunc[bSet | bStyle &lt;&lt; 1],</div><div class="line">         aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),</div><div class="line">         aNodeList = bStyle ? this.cssNodes : this.nodes;</div><div class="line"></div><div class="line">    if (bSet &amp;&amp; bStyle) { aArgs.push(&quot;&quot;); }</div><div class="line">    for (</div><div class="line">      var nItem = 0, nLen = this.nodes.length;</div><div class="line">      nItem &lt; nLen;</div><div class="line">      fAction.apply(aNodeList[nItem++], aArgs)</div><div class="line">    );</div><div class="line">    this.follow = setSomething.caller;</div><div class="line">    return this;</div><div class="line">  }</div><div class="line"></div><div class="line">  function setStyles (sProp, sVal) { return setSomething.call(this, true, sProp, sVal); }</div><div class="line">  function setAttribs (sProp, sVal) { return setSomething.call(this, false, sProp, sVal); }</div><div class="line">  function getSelectors () { return this.selectors; };</div><div class="line">  function getNodes () { return this.nodes; };</div><div class="line"></div><div class="line">  return (function (sSelectors) {</div><div class="line">    var oQuery = new Function(&apos;return arguments.callee.follow.apply(arguments.callee, arguments);&apos;);</div><div class="line">    oQuery.selectors = sSelectors;</div><div class="line">    oQuery.nodes = document.querySelectorAll(sSelectors);</div><div class="line">    oQuery.cssNodes = Array.prototype.map.call(oQuery.nodes, function (oInlineCSS) { return oInlineCSS.style; });</div><div class="line">    oQuery.attributes = setAttribs;</div><div class="line">    oQuery.inlineStyle = setStyles;</div><div class="line">    oQuery.follow = getNodes;</div><div class="line">    oQuery.toString = getSelectors;</div><div class="line">    oQuery.valueOf = getNodes;</div><div class="line">    return oQuery;</div><div class="line">  });</div><div class="line">})();</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;&lt;div class=&quot;testClass&quot;&gt;Lorem ipsum&lt;/div&gt;</div><div class="line">&lt;p&gt;Some text&lt;/p&gt;</div><div class="line">&lt;&lt;div class=&quot;testClass&quot;&gt;dolor sit amet&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  domQuery(&apos;.testClass&apos;)</div><div class="line">&#x200B;    .attributes(&apos;lang&apos;, &apos;en&apos;)(&apos;title&apos;, &apos;Risus abundat in ore stultorum&apos;)</div><div class="line">    .inlineStyle(&apos;background-color&apos;, &apos;black&apos;)(&apos;color&apos;, &apos;white&apos;)(&apos;width&apos;, &apos;100px&apos;)(&apos;height&apos;, &apos;50px&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/08/Highcharts/hi/" rel="next" title="Highcharts使用">
+                <i class="fa fa-chevron-left"></i> Highcharts使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/love.png"
+               alt="小小鱼" />
+          <p class="site-author-name" itemprop="name">小小鱼</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#Function-构造器会创建一个新的-Function-对象。-在-JavaScript中每个函数都是一个Function对象。"><span class="nav-number">1.</span> <span class="nav-text">Function 构造器会创建一个新的 Function 对象。 在 JavaScript中每个函数都是一个Function对象。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小小鱼</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 按需加载背景 -->
+  <!-- 识别手机或电脑的js开始 -->
+  <script type="text/javascript">
+  (function(){
+    var res = GetRequest();
+    var par = res['index'];
+    if(par!='gfan'){
+      var ua=navigator.userAgent.toLowerCase();
+      var contains=function (a, b){
+          if(a.indexOf(b)!=-1){return true;}
+      };
+      if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla"))||(contains(ua,"android") && contains(ua,"opera"))||contains(ua,"ucweb7")||contains(ua,"iphone")){
+        return false;
+      } else {
+        $.getScript("/js/src/particles.js");
+      }
+    }
+  })();
+  function GetRequest() {
+    var url = location.search;
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+    }
+    return theRequest;
+  }
+  </script>
+  <!-- 识别手机或电脑的js结束 -->
+
+  <!-- 背景动画 -->
+
+  <script type="text/javascript" src="/js/src/particles.js"></script>
+
+</body>
+</html>
