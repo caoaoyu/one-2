@@ -236,6 +236,159 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/29/HTML/time/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/29/HTML/time/" itemprop="url">
+                  日期和时间戳相互转换
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-29T10:12:18+08:00">
+                2016-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<blockquote>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x5E74;&#x6708;&#x65E5;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function mytime() {</div><div class="line"></div><div class="line">        var mys     = new Date();       </div><div class="line"></div><div class="line">        var years    = mys.getFullYear();       </div><div class="line"></div><div class="line">        var months   = mys.getMonth() + 1;</div><div class="line"></div><div class="line">        var days     = mys.getDate();</div><div class="line"></div><div class="line">        var mytime = years + &quot;-&quot; + months + &quot;-&quot; + days;</div><div class="line">        return mytime;   </div><div class="line"></div><div class="line">}</div><div class="line">var newtime = mytime();</div><div class="line">$(&apos;#dt&apos;).val(newtime);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x683C;&#x5F0F;&#x65F6;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x95F4;&#x6233;  </p>
+</blockquote>
+<figure class="highlight plain"><figcaption><span>nowtime() {</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x5E74;&#x6708;&#x65E5;</div><div class="line"></div><div class="line">        var nows     = new Date();       </div><div class="line"></div><div class="line">        var years    = nows.getFullYear();       </div><div class="line"></div><div class="line">        var months   = nows.getMonth() + 1;</div><div class="line"></div><div class="line">        var days     = nows.getDate();</div><div class="line"></div><div class="line">        var nowtimes = years + &quot;-&quot; + months + &quot;-&quot; + days;//&#x5F53;&#x524D;&#x7684;&#x683C;&#x5F0F;&#x65F6;&#x95F4;</div><div class="line"></div><div class="line">//&#x5904;&#x7406;&#x5F97;&#x5230;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;</div><div class="line"></div><div class="line">        var now_str = nowtimes.replace(/:/g, &apos;-&apos;);//&#x5904;&#x7406;&#x7684;&#x65F6;&#x5206;&#x79D2;&#xFF08;&#x8FD9;&#x4E2A;&#x6839;&#x636E;&#x9700;&#x8981;&#x9009;&#x62E9;&#xFF09;        now_str = now_str.replace(/ /g, &apos;-&apos;);//&#x5904;&#x7406;&#x7A7A;&#x683C;       </div><div class="line"></div><div class="line">        var arrs    = now_str.split(&quot;-&quot;);//&#x5206;&#x5272;&#x6210;&#x6570;&#x7EC4;       </div><div class="line"></div><div class="line">        var datums  = new Date(Date.UTC(arrs[0], arrs[1] - 1, arrs[2]));       </div><div class="line"></div><div class="line">        var nowtime = datums.getTime();//&#x683C;&#x5F0F;&#x65F6;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x95F4;&#x6233;       </div><div class="line"></div><div class="line">        return nowtime;   </div><div class="line"></div><div class="line">}</div><div class="line">console.log(nowtime());</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line"> 	var stringTime = $(&apos;#dt&apos;).val();</div><div class="line"></div><div class="line">	var timestamp2 = Date.parse(new Date(stringTime));</div><div class="line">	var stringTime1 = $(&apos;#dM&apos;).val();</div><div class="line">	var timestamp3 = Date.parse(new Date(stringTime1));</div><div class="line">		  if (timestamp3 &lt;  timestamp2) {</div><div class="line">		  		$(&apos;#dM&apos;).val(&quot;&quot;);</div><div class="line">}</div><div class="line">});</div><div class="line">console.log(stringTime + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp2);</div><div class="line">console.log(stringTime1 + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp3);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">	var myDate=new Date()</div><div class="line">	myDate.setDate(myDate.getDate()-30)</div><div class="line">	var years    = myDate.getFullYear();       </div><div class="line"></div><div class="line">       var months   = myDate.getMonth() + 1;</div><div class="line"></div><div class="line">       var days     = myDate.getDate();</div><div class="line"></div><div class="line">       var oldtime = years + &quot;-&quot; + months + &quot;-&quot; + days;</div><div class="line">	$(&apos;#dt&apos;).val(oldtime);</div><div class="line">	$(&apos;#dM&apos;).val(newtime);</div><div class="line"></div><div class="line">});</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;(&#x4EE5;s&#x4E3A;&#x5355;&#x4F4D;)</div><div class="line">var timestamp = Date.parse(new Date());</div><div class="line">timestamp = timestamp / 1000;</div><div class="line">//&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1403149534</div><div class="line">console.log(&quot;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp);</div><div class="line"></div><div class="line">// &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x7684;&#x65F6;&#x95F4;&#x6233;</div><div class="line">var stringTime = &quot;2014-07-10 10:21:12&quot;;</div><div class="line">var timestamp2 = Date.parse(new Date(stringTime));</div><div class="line">timestamp2 = timestamp2 / 1000;</div><div class="line">//2014-07-10 10:21:12&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1404958872 </div><div class="line">console.log(stringTime + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp2);</div><div class="line"></div><div class="line">// &#x5C06;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6362;&#x6210;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;</div><div class="line">var timestamp3 = 1403058804;</div><div class="line">var newDate = new Date();</div><div class="line">newDate.setTime(timestamp3 * 1000);</div><div class="line">// Wed Jun 18 2014 </div><div class="line">console.log(newDate.toDateString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT </div><div class="line">console.log(newDate.toGMTString());</div><div class="line">// 2014-06-18T02:33:24.000Z</div><div class="line">console.log(newDate.toISOString());</div><div class="line">// 2014-06-18T02:33:24.000Z </div><div class="line">console.log(newDate.toJSON());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; </div><div class="line">console.log(newDate.toLocaleDateString());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleString());</div><div class="line">// &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleTimeString());</div><div class="line">// Wed Jun 18 2014 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;)</div><div class="line">console.log(newDate.toString());</div><div class="line">// 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;) </div><div class="line">console.log(newDate.toTimeString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT</div><div class="line">console.log(newDate.toUTCString());</div><div class="line"></div><div class="line">Date.prototype.format = function(format) {</div><div class="line">       var date = {</div><div class="line">              &quot;M+&quot;: this.getMonth() + 1,</div><div class="line">              &quot;d+&quot;: this.getDate(),</div><div class="line">              &quot;h+&quot;: this.getHours(),</div><div class="line">              &quot;m+&quot;: this.getMinutes(),</div><div class="line">              &quot;s+&quot;: this.getSeconds(),</div><div class="line">              &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3),</div><div class="line">              &quot;S+&quot;: this.getMilliseconds()</div><div class="line">       };</div><div class="line">       if (/(y+)/i.test(format)) {</div><div class="line">              format = format.replace(RegExp.$1, (this.getFullYear() + &apos;&apos;).substr(4 - RegExp.$1.length));</div><div class="line">       }</div><div class="line">       for (var k in date) {</div><div class="line">              if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(format)) {</div><div class="line">                     format = format.replace(RegExp.$1, RegExp.$1.length == 1</div><div class="line">                            ? date[k] : (&quot;00&quot; + date[k]).substr((&quot;&quot; + date[k]).length));</div><div class="line">              }</div><div class="line">       }</div><div class="line">       return format;</div><div class="line">}</div><div class="line">console.log(newDate.format(&apos;yyyy-MM-dd h:m:s&apos;));</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/29/HTML/time/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/18/HTML/Console/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1717,160 +1870,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/20/HTML/sessionStorage和localStorage/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/20/HTML/sessionStorage和localStorage/" itemprop="url">
-                  sessionStorage和localStorage
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-20T10:27:18+08:00">
-                2016-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <hr>
-<blockquote>
-<p>html5&#x4E2D;&#x7684;Web Storage&#x5305;&#x62EC;&#x4E86;&#x4E24;&#x79CD;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#xFF1A;sessionStorage&#x548C;localStorage&#x3002;</p>
-</blockquote>
-<p>sessionStorage&#x7528;&#x4E8E;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x4F1A;&#x8BDD;&#xFF08;session&#xFF09;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x53EA;&#x6709;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4F1A;&#x8BDD;&#x4E2D;&#x7684;&#x9875;&#x9762;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5E76;&#x4E14;&#x5F53;&#x4F1A;&#x8BDD;&#x7ED3;&#x675F;&#x540E;&#x6570;&#x636E;&#x4E5F;&#x968F;&#x4E4B;&#x9500;&#x6BC1;&#x3002;&#x56E0;&#x6B64;sessionStorage&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x6301;&#x4E45;&#x5316;&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x4F1A;&#x8BDD;&#x7EA7;&#x522B;&#x7684;&#x5B58;&#x50A8;&#x3002;</p>
-<p>&#x800C;localStorage&#x7528;&#x4E8E;&#x6301;&#x4E45;&#x5316;&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x9664;&#x975E;&#x4E3B;&#x52A8;&#x5220;&#x9664;&#x6570;&#x636E;&#xFF0C;&#x5426;&#x5219;&#x6570;&#x636E;&#x662F;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x8FC7;&#x671F;&#x7684;&#x3002;</p>
-<blockquote>
-<p>web storage&#x548C;cookie&#x7684;&#x533A;&#x522B;</p>
-</blockquote>
-<p>Web Storage&#x7684;&#x6982;&#x5FF5;&#x548C;cookie&#x76F8;&#x4F3C;&#xFF0C;&#x533A;&#x522B;&#x662F;&#x5B83;&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x5927;&#x5BB9;&#x91CF;&#x5B58;&#x50A8;&#x8BBE;&#x8BA1;&#x7684;&#x3002;Cookie&#x7684;&#x5927;&#x5C0F;&#x662F;&#x53D7;&#x9650;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x6B21;&#x4F60;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;Cookie&#x90FD;&#x4F1A;&#x88AB;&#x53D1;&#x9001;&#x8FC7;&#x53BB;&#xFF0C;&#x8FD9;&#x6837;&#x65E0;&#x5F62;&#x4E2D;&#x6D6A;&#x8D39;&#x4E86;&#x5E26;&#x5BBD;&#xFF0C;&#x53E6;&#x5916;cookie&#x8FD8;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x8DE8;&#x57DF;&#x8C03;&#x7528;&#x3002;</p>
-<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;Web Storage&#x62E5;&#x6709;setItem,getItem,removeItem,clear&#x7B49;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x50CF;cookie&#x9700;&#x8981;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x5C01;&#x88C5;setCookie&#xFF0C;getCookie&#x3002;</p>
-<p>&#x4F46;&#x662F;Cookie&#x4E5F;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x6216;&#x7F3A;&#x7684;&#xFF1A;Cookie&#x7684;&#x4F5C;&#x7528;&#x662F;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x4F5C;&#x4E3A;HTTP&#x89C4;&#x8303;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x800C;&#x5B58;&#x5728; &#xFF0C;&#x800C;Web Storage&#x4EC5;&#x4EC5;&#x662F;&#x4E3A;&#x4E86;&#x5728;&#x672C;&#x5730;&#x201C;&#x5B58;&#x50A8;&#x201D;&#x6570;&#x636E;&#x800C;&#x751F;&#xFF08;&#x6765;&#x81EA;@otakustay &#x7684;&#x7EA0;&#x6B63;&#xFF09;</p>
-<blockquote>
-<p>html5 web storage&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;&#x60C5;&#x51B5;</p>
-</blockquote>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x652F;&#x6301;&#x9664;&#x4E86;IE&#xFF17;&#x53CA;&#x4EE5;&#x4E0B;&#x4E0D;&#x652F;&#x6301;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x6807;&#x51C6;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x5B8C;&#x5168;&#x652F;&#x6301;(ie&#x53CA;FF&#x9700;&#x5728;web&#x670D;&#x52A1;&#x5668;&#x91CC;&#x8FD0;&#x884C;)&#xFF0C;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;IE&#x603B;&#x662F;&#x529E;&#x597D;&#x4E8B;&#xFF0C;&#x4F8B;&#x5982;IE7&#x3001;IE6&#x4E2D;&#x7684;UserData&#x5176;&#x5B9E;&#x5C31;&#x662F;javascript&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x53EF;&#x4EE5;&#x7EDF;&#x4E00;&#x5230;&#x6240;&#x6709;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301;web storage&#x3002;</p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/20/HTML/sessionStorage和localStorage/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1916,7 +1915,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-count">43</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1924,7 +1923,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
