@@ -236,7 +236,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/01/JQuery/Parent/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/21/Highcharts/问题小结/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="小小鱼">
@@ -261,8 +261,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/01/JQuery/Parent/" itemprop="url">
-                  jQuery 遍历 - 祖先
+                <a class="post-title-link" href="/2016/09/21/Highcharts/问题小结/" itemprop="url">
+                  Highcharts实例
                 </a>
               
             
@@ -276,8 +276,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-01T10:21:46+08:00">
-                2016-09-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-21T13:11:06+08:00">
+                2016-09-21
               </time>
             
 
@@ -295,8 +295,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
+                  <a href="/categories/Highcharts/" itemprop="url" rel="index">
+                    <span itemprop="name">Highcharts</span>
                   </a>
                 </span>
 
@@ -331,23 +331,205 @@
 
       
         
-          <p>&#x7956;&#x5148;&#x662F;&#x7236;&#x3001;&#x7956;&#x7236;&#x6216;&#x66FE;&#x7956;&#x7236;&#x7B49;&#x7B49;&#x3002;&#x901A;&#x8FC7; jQuery&#xFF0C;&#x80FD;&#x591F;&#x5411;&#x4E0A;&#x904D;&#x5386; DOM &#x6811;&#xFF0C;&#x4EE5;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x7684;&#x7956;&#x5148;&#x3002;</p>
-<hr>
-<blockquote>
-<p>&#x5411;&#x4E0A;&#x904D;&#x5386; DOM &#x6811;</p>
-</blockquote>
-<p>&#x5B83;&#x4EEC;&#x7528;&#x4E8E;&#x5411;&#x4E0A;&#x904D;&#x5386; DOM &#x6811;&#xFF1A;<br>parent()<br>parents()<br>parentsUntil()<br>jQuery parent() &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x88AB;&#x9009;&#x5143;&#x7D20;&#x7684;&#x76F4;&#x63A5;&#x7236;&#x5143;&#x7D20;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x4F1A;&#x5411;&#x4E0A;&#x4E00;&#x7EA7;&#x5BF9; DOM &#x6811;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
-<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x8FD4;&#x56DE;&#x6BCF;&#x4E2A; span &#x5143;&#x7D20;&#x7684;&#x7684;&#x76F4;&#x63A5;&#x7236;&#x5143;&#x7D20;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function(){</div><div class="line">  $(&quot;span&quot;).parent();</div><div class="line">});</div></pre></td></tr></table></figure>
-<blockquote>
-<p>jQuery parents() &#x65B9;&#x6CD5;</p>
-</blockquote>
-<p>parents() &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x88AB;&#x9009;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x7956;&#x5148;&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x4E00;&#x8DEF;&#x5411;&#x4E0A;&#x76F4;&#x5230;&#x6587;&#x6863;&#x7684;&#x6839;&#x5143;&#x7D20; html</p>
-<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x8FD4;&#x56DE;&#x6240;&#x6709; span &#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x7956;&#x5148;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function(){</div><div class="line">  $(&quot;span&quot;).parents();</div><div class="line">});</div></pre></td></tr></table></figure>
+          <p>data &#x4F20;&#x503C;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line">function highchats(data){</div><div class="line">   var time_arr = [];</div><div class="line">   var order_arr = [];  //&#x58F0;&#x660E;&#x6570;&#x7EC4;</div><div class="line">   var deal_arr = [];</div><div class="line">   var succ_arr = [];</div><div class="line">    for (var i = 0; i &lt; data.data.list.length; i++) {</div><div class="line">       time_arr.push(data.data.list[i].data_time);</div><div class="line">       order_arr.push(data.data.list[i].order_total);</div><div class="line">       succ_arr.push(data.data.list[i].order_succ);</div><div class="line">       var deal = data.data.list[i].order_rate;</div><div class="line">       var deal_a = deal.replace(/\%/,&quot;&quot; );  //&#x66FF;&#x6362;&#x767E;&#x5206;&#x53F7;</div><div class="line">       var d = parseFloat(deal_a); //&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x7C7B;&#x578B;&#xFF0C;highcharts&#x53EA;&#x652F;&#x6301;&#x6570;&#x5B57;</div><div class="line">       deal_arr.push(d);//&#x5FAA;&#x73AF;&#x751F;&#x6210;&#x6570;&#x7EC4;</div><div class="line">    }</div><div class="line">    console.log(deal_arr)</div><div class="line"></div><div class="line"></div><div class="line">new Highcharts.chart(&apos;container&apos;, {//&#x627F;&#x8F7D;&#x5BB9;&#x5668;container</div><div class="line">     title: {</div><div class="line">            text: &apos;&#x8BA2;&#x5355;&#x6570;&#x636E;&apos;,</div><div class="line">            x: -20 //center</div><div class="line">        },</div><div class="line">        xAxis: {</div><div class="line">            categories: time_arr,</div><div class="line">        },</div><div class="line">        </div><div class="line">//&#x591A;&#x5143;&#x8F74;</div><div class="line">        yAxis: [</div><div class="line"></div><div class="line">        {</div><div class="line">            labels: {</div><div class="line">                format: &apos;{value}K&apos;,</div><div class="line">                style: {</div><div class="line">                    color: Highcharts.getOptions().colors[3]</div><div class="line">                }</div><div class="line">            },</div><div class="line">            title: {</div><div class="line">                text: &apos;&#x6210;&#x4EA4;&#x6570;&apos;,</div><div class="line">                style: {</div><div class="line">                    color: Highcharts.getOptions().colors[1]</div><div class="line">                }</div><div class="line"></div><div class="line"></div><div class="line">            }</div><div class="line"></div><div class="line">        },</div><div class="line"></div><div class="line">        {</div><div class="line">            labels: {</div><div class="line">                enabled: false, //&#x591A;&#x5143;&#x8F74;&#x8BBE;&#x7F6E;labels&#x4E0D;&#x663E;&#x793A;</div><div class="line">            }, </div><div class="line"></div><div class="line">         title: {</div><div class="line">                text: &apos;&#x8BA2;&#x5355;&#x6570;&apos;,</div><div class="line">            }     </div><div class="line">            </div><div class="line">        },</div><div class="line">        { // Secondary yAxis</div><div class="line">            title: {</div><div class="line">                text: &apos;&#x6210;&#x4EA4;&#x7387;&apos;,</div><div class="line">                style: {</div><div class="line">                    color: Highcharts.getOptions().colors[0]</div><div class="line">                }</div><div class="line">            },</div><div class="line">            labels: {</div><div class="line">                format: &apos;{value} %&apos;,</div><div class="line">                style: {</div><div class="line">                    color: Highcharts.getOptions().colors[0]</div><div class="line">                }</div><div class="line">            },</div><div class="line">            opposite: true</div><div class="line">        }],</div><div class="line">         tooltip: {</div><div class="line">            shared: true</div><div class="line">        },</div><div class="line">     /*   legend: {</div><div class="line">            layout: &apos;vertical&apos;,</div><div class="line">            align: &apos;right&apos;,</div><div class="line">            verticalAlign: &apos;middle&apos;,</div><div class="line">            borderWidth: 0</div><div class="line">        },*/ &#x6807;&#x9898;&#x4F4D;&#x7F6E;</div><div class="line">        series: [{</div><div class="line">            name: &apos;&#x6210;&#x4EA4;&#x7387;&apos;,</div><div class="line">            type: &apos;spline&apos;,</div><div class="line">            yAxis: 2,</div><div class="line">            data: deal_arr,</div><div class="line">            tooltip: {</div><div class="line">                valueSuffix: &apos;%&apos;</div><div class="line">            }</div><div class="line"></div><div class="line">        }, {</div><div class="line">            name: &apos;&#x6210;&#x4EA4;&#x6570;&apos;,</div><div class="line">            type: &apos;spline&apos;,</div><div class="line">            yAxis: 1 ,</div><div class="line">            data: succ_arr,</div><div class="line">            tooltip: {</div><div class="line">                valueSuffix: &apos;&#x5355;&apos;</div><div class="line">            }</div><div class="line">        },</div><div class="line">        {</div><div class="line">            name: &apos;&#x8BA2;&#x5355;&#x6570;&apos;,</div><div class="line">            type: &apos;spline&apos;,</div><div class="line">            yAxis: 0 ,</div><div class="line">            data: order_arr,  //order_arr &#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</div><div class="line">            tooltip: {</div><div class="line">                valueSuffix: &apos;&#x5355;&apos;</div><div class="line">            }</div><div class="line">        }]</div><div class="line">    });</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/01/JQuery/Parent/#more" rel="contents">
+            <a class="btn" href="/2016/09/21/Highcharts/问题小结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/05/HTML/background/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/05/HTML/background/" itemprop="url">
+                  background 属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-05T17:56:16+08:00">
+                2016-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h6 id="CSS3-&#x5305;&#x542B;&#x591A;&#x4E2A;&#x65B0;&#x7684;&#x80CC;&#x666F;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x80CC;&#x666F;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x63A7;&#x5236;&#x3002;"><a href="#CSS3-&#x5305;&#x542B;&#x591A;&#x4E2A;&#x65B0;&#x7684;&#x80CC;&#x666F;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x80CC;&#x666F;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x63A7;&#x5236;&#x3002;" class="headerlink" title="CSS3 &#x5305;&#x542B;&#x591A;&#x4E2A;&#x65B0;&#x7684;&#x80CC;&#x666F;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x80CC;&#x666F;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x63A7;&#x5236;&#x3002;"></a>CSS3 &#x5305;&#x542B;&#x591A;&#x4E2A;&#x65B0;&#x7684;&#x80CC;&#x666F;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x80CC;&#x666F;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x63A7;&#x5236;&#x3002;</h6><hr>
+<p>&#x5982;&#x4F55;&#x5728;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#x4E2D;&#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x80CC;&#x666F;&#x5C5E;&#x6027;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">body</div><div class="line">  { </div><div class="line">  background: #00FF00 url(bgimage.gif) no-repeat fixed top;</div><div class="line">  }</div></pre></td></tr></table></figure>
+<p>&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301; background &#x5C5E;&#x6027;&#x3002;</p>
+<p>background &#x7B80;&#x5199;&#x5C5E;&#x6027;&#x5728;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#x4E2D;&#x8BBE;&#x7F6E;&#x6240;&#x6709;&#x7684;&#x80CC;&#x666F;&#x5C5E;&#x6027;,&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">background-color</div><div class="line">background-position</div><div class="line">background-size</div><div class="line">background-repeat</div><div class="line">background-origin</div><div class="line">background-clip</div><div class="line">background-attachment</div><div class="line">background-image</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th style="text-align:right">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#x3002;</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x3002;</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x5982;&#x4F55;&#x91CD;&#x590D;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x3002;</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5B9A;&#x4F4D;&#x533A;&#x57DF;&#x3002;</td>
+</tr>
+<tr>
+<td>background-clip</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x7684;&#x7ED8;&#x5236;&#x533A;&#x57DF;&#x3002;</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x662F;&#x5426;&#x56FA;&#x5B9A;&#x6216;&#x8005;&#x968F;&#x7740;&#x9875;&#x9762;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x6EDA;&#x52A8;&#x3002;</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x50CF;&#x3002;</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td style="text-align:right">&#x89C4;&#x5B9A;&#x5E94;&#x8BE5;&#x4ECE;&#x7236;&#x5143;&#x7D20;&#x7EE7;&#x627F; background &#x5C5E;&#x6027;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>background-size </p>
+</blockquote>
+<h6 id="&#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x5728;-CSS3-&#x4E4B;&#x524D;&#xFF0C;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x7531;&#x56FE;&#x7247;&#x7684;&#x5B9E;&#x9645;&#x5C3A;&#x5BF8;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x5728;-CSS3-&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x8FD9;&#x5C31;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x80CC;&#x666F;&#x56FE;&#x7247;-&#x4EE5;&#x50CF;&#x7D20;&#x6216;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#x3002;&#x5982;&#x679C;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#xFF0C;&#x90A3;&#x4E48;&#x5C3A;&#x5BF8;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;"><a href="#&#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x5728;-CSS3-&#x4E4B;&#x524D;&#xFF0C;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x7531;&#x56FE;&#x7247;&#x7684;&#x5B9E;&#x9645;&#x5C3A;&#x5BF8;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x5728;-CSS3-&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x8FD9;&#x5C31;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x80CC;&#x666F;&#x56FE;&#x7247;-&#x4EE5;&#x50CF;&#x7D20;&#x6216;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#x3002;&#x5982;&#x679C;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#xFF0C;&#x90A3;&#x4E48;&#x5C3A;&#x5BF8;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;" class="headerlink" title="&#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x5728; CSS3 &#x4E4B;&#x524D;&#xFF0C;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x7531;&#x56FE;&#x7247;&#x7684;&#x5B9E;&#x9645;&#x5C3A;&#x5BF8;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x5728; CSS3 &#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x8FD9;&#x5C31;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x80CC;&#x666F;&#x56FE;&#x7247;,&#x4EE5;&#x50CF;&#x7D20;&#x6216;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#x3002;&#x5982;&#x679C;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#xFF0C;&#x90A3;&#x4E48;&#x5C3A;&#x5BF8;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;"></a>&#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x5728; CSS3 &#x4E4B;&#x524D;&#xFF0C;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x7531;&#x56FE;&#x7247;&#x7684;&#x5B9E;&#x9645;&#x5C3A;&#x5BF8;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x5728; CSS3 &#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x89C4;&#x5B9A;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x8FD9;&#x5C31;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x80CC;&#x666F;&#x56FE;&#x7247;,&#x4EE5;&#x50CF;&#x7D20;&#x6216;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#x3002;&#x5982;&#x679C;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x89C4;&#x5B9A;&#x5C3A;&#x5BF8;&#xFF0C;&#x90A3;&#x4E48;&#x5C3A;&#x5BF8;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x3002;</h6>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/05/HTML/background/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1590,250 +1772,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/22/css/display/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/22/css/display/" itemprop="url">
-                  display 属性
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-22T00:00:00+08:00">
-                2016-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;"><a href="#&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;" class="headerlink" title="&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;"></a>&#x5B9A;&#x4E49;&#x548C;&#x7528;&#x6CD5;</h5><p>display &#x5C5E;&#x6027;&#x89C4;&#x5B9A;&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x751F;&#x6210;&#x7684;&#x6846;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
-<h5 id="&#x8BF4;&#x660E;"><a href="#&#x8BF4;&#x660E;" class="headerlink" title="&#x8BF4;&#x660E;"></a>&#x8BF4;&#x660E;</h5><p>&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5EFA;&#x7ACB;&#x5E03;&#x5C40;&#x65F6;&#x5143;&#x7D20;&#x751F;&#x6210;&#x7684;&#x663E;&#x793A;&#x6846;&#x7C7B;&#x578B;&#x3002;&#x5BF9;&#x4E8E; HTML &#x7B49;&#x6587;&#x6863;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528; display &#x4E0D;&#x8C28;&#x614E;&#x4F1A;&#x5F88;&#x5371;&#x9669;&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x8FDD;&#x53CD; HTML &#x4E2D;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x7684;&#x663E;&#x793A;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x3002;&#x5BF9;&#x4E8E; XML&#xFF0C;&#x7531;&#x4E8E; XML &#x6CA1;&#x6709;&#x5185;&#x7F6E;&#x7684;&#x8FD9;&#x79CD;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x6709; display &#x662F;&#x7EDD;&#x5BF9;&#x5FC5;&#x8981;&#x7684;&#x3002;</p>
-<h5 id="&#x4F7F;&#x6BB5;&#x843D;&#x751F;&#x51FA;&#x884C;&#x5185;&#x6846;&#xFF1A;"><a href="#&#x4F7F;&#x6BB5;&#x843D;&#x751F;&#x51FA;&#x884C;&#x5185;&#x6846;&#xFF1A;" class="headerlink" title="&#x4F7F;&#x6BB5;&#x843D;&#x751F;&#x51FA;&#x884C;&#x5185;&#x6846;&#xFF1A;"></a>&#x4F7F;&#x6BB5;&#x843D;&#x751F;&#x51FA;&#x884C;&#x5185;&#x6846;&#xFF1A;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">p {display: inline}</div><div class="line">div {display: none}</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</td>
-<td style="text-align:right">inline</td>
-</tr>
-<tr>
-<td>&#x7EE7;&#x627F;&#x6027;&#xFF1A;</td>
-<td style="text-align:right">no</td>
-</tr>
-<tr>
-<td>&#x7248;&#x672C;&#xFF1A;</td>
-<td style="text-align:right">CSS1</td>
-</tr>
-<tr>
-<td>JavaScript &#x8BED;&#x6CD5;&#xFF1A;</td>
-<td style="text-align:right">object.style.display=&#x201D;inline&#x201D;</td>
-</tr>
-<tr>
-<td>&#x503C;</td>
-<td style="text-align:right">&#x63CF;&#x8FF0;</td>
-</tr>
-<tr>
-<td>none</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4E0D;&#x4F1A;&#x88AB;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>block</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x5C06;&#x663E;&#x793A;&#x4E3A;&#x5757;&#x7EA7;&#x5143;&#x7D20;,&#x6B64;&#x5143;&#x7D20;&#x524D;&#x540E;&#x4F1A;&#x5E26;&#x6709;&#x6362;&#x884C;&#x7B26;</td>
-</tr>
-<tr>
-<td>inline</td>
-<td style="text-align:right">&#x9ED8;&#x8BA4;&#x5143;&#x7D20;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#x4E3A;&#x5185;&#x8054;&#x5143;&#x7D20;,&#x5143;&#x7D20;&#x524D;&#x540E;&#x6CA1;&#x6709;&#x6362;&#x884C;&#x7B26;</td>
-</tr>
-<tr>
-<td>inline-block</td>
-<td style="text-align:right">&#x884C;&#x5185;&#x5757;&#x5143;&#x7D20;&#x3002;</td>
-</tr>
-<tr>
-<td>list-item</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x5217;&#x8868;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>run-in</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x6839;&#x636E;&#x4E0A;&#x4E0B;&#x6587;&#x4F5C;&#x4E3A;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x6216;&#x5185;&#x8054;&#x5143;&#x7D20;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>compact</td>
-<td style="text-align:right">CSS &#x4E2D;&#x6709;&#x503C; compact,&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x7F3A;&#x4E4F;&#x5E7F;&#x6CDB;&#x652F;&#x6301;,&#x5DF2;&#x7ECF;&#x4ECE; CSS2.1 &#x4E2D;&#x5220;&#x9664;</td>
-</tr>
-<tr>
-<td>marker    CSS</td>
-<td style="text-align:right">&#x4E2D;&#x6709;&#x503C; marker,&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x7F3A;&#x4E4F;&#x5E7F;&#x6CDB;&#x652F;&#x6301;&#xFF0C;&#x5DF2;&#x7ECF;&#x4ECE; CSS2.1 &#x4E2D;&#x5220;&#x9664;</td>
-</tr>
-<tr>
-<td>table</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x5757;&#x7EA7;&#x8868;&#x683C;&#x6765;&#x663E;&#x793A;&#x8868;&#x683C;&#x524D;&#x540E;&#x5E26;&#x6709;&#x6362;&#x884C;&#x7B26;</td>
-</tr>
-<tr>
-<td>inline-table</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x5185;&#x8054;&#x8868;&#x683C;&#x6765;&#x663E;&#x793A;&#x8868;&#x683C;&#x524D;&#x540E;&#x6CA1;&#x6709;&#x6362;&#x884C;&#x7B26;</td>
-</tr>
-<tr>
-<td>table-row-group</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x884C;&#x7684;&#x5206;&#x7EC4;&#x6765;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-header-group</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x884C;&#x7684;&#x5206;&#x7EC4;&#x6765;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-footer-group</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x884C;&#x7684;&#x5206;&#x7EC4;&#x6765;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-row</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x884C;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-column-group</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5217;&#x7684;&#x5206;&#x7EC4;&#x6765;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-column</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x5217;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>table-caption</td>
-<td style="text-align:right">&#x5143;&#x7D20;&#x4F1A;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x6807;&#x9898;&#x663E;&#x793A;</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td style="text-align:right">&#x89C4;&#x5B9A;&#x5E94;&#x8BE5;&#x4ECE;&#x7236;&#x5143;&#x7D20;&#x7EE7;&#x627F; display &#x5C5E;&#x6027;&#x7684;&#x503C;</td>
-</tr>
-</tbody>
-</table>
-
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/22/css/display/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1879,7 +1817,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">44</span>
+              <span class="site-state-item-count">45</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
