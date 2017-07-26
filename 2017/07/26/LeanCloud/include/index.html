@@ -1,0 +1,714 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x521B;&amp;#x5EFA;&amp;#x67E5;&amp;#x8BE2;&amp;#x5B9E;&amp;#x4F8B;1const query = new AV.Query(&amp;apos;Todo&amp;apos;); &amp;#x6700;&amp;#x57FA;&amp;#x7840;&amp;#x7684;&amp;#x7528;&amp;#x6CD5;&amp;#x662F;&amp;#x6839;&amp;#x636E; objectId &amp;#x6765;&amp;#x67E5;&amp;#x8BE2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初用 LeanCloud - 查询">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/LeanCloud/include/index.html">
+<meta property="og:site_name" content="鱼儿游啊游">
+<meta property="og:description" content="&amp;#x521B;&amp;#x5EFA;&amp;#x67E5;&amp;#x8BE2;&amp;#x5B9E;&amp;#x4F8B;1const query = new AV.Query(&amp;apos;Todo&amp;apos;); &amp;#x6700;&amp;#x57FA;&amp;#x7840;&amp;#x7684;&amp;#x7528;&amp;#x6CD5;&amp;#x662F;&amp;#x6839;&amp;#x636E; objectId &amp;#x6765;&amp;#x67E5;&amp;#x8BE2">
+<meta property="og:updated_time" content="2017-07-26T06:31:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初用 LeanCloud - 查询">
+<meta name="twitter:description" content="&amp;#x521B;&amp;#x5EFA;&amp;#x67E5;&amp;#x8BE2;&amp;#x5B9E;&amp;#x4F8B;1const query = new AV.Query(&amp;apos;Todo&amp;apos;); &amp;#x6700;&amp;#x57FA;&amp;#x7840;&amp;#x7684;&amp;#x7528;&amp;#x6CD5;&amp;#x662F;&amp;#x6839;&amp;#x636E; objectId &amp;#x6765;&amp;#x67E5;&amp;#x8BE2">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/LeanCloud/include/"/>
+
+
+
+
+
+  <title> 初用 LeanCloud - 查询 | 鱼儿游啊游 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">鱼儿游啊游</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/LeanCloud/include/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                初用 LeanCloud - 查询
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
+                2017-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeanCloud/" itemprop="url" rel="index">
+                    <span itemprop="name">LeanCloud</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;"><a href="#&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;"></a>&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;);</div></pre></td></tr></table></figure>
+<p>&#x6700;&#x57FA;&#x7840;&#x7684;&#x7528;&#x6CD5;&#x662F;&#x6839;&#x636E; objectId &#x6765;&#x67E5;&#x8BE2;&#x5BF9;&#x8C61;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;); query.get(&apos;57328ca079bc44005c2472d0&apos;).then(function (todo) {</div><div class="line"></div><div class="line">// todo &#x5C31;&#x662F; id &#x4E3A; 57328ca079bc44005c2472d0 &#x7684; Todo &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</div><div class="line">}, function (error) {</div><div class="line">  // &#x5F02;&#x5E38;&#x5904;&#x7406;</div><div class="line">});</div></pre></td></tr></table></figure></p>
+<h5 id="&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;"><a href="#&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;" class="headerlink" title="&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;"></a>&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;</h5><table>
+<thead>
+<tr>
+<th>&#x903B;&#x8F91;&#x64CD;&#x4F5C;</th>
+<th>AVQuery &#x65B9;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7B49;&#x4E8E;</td>
+<td>equalTo</td>
+</tr>
+<tr>
+<td>&#x4E0D;&#x7B49;&#x4E8E;</td>
+<td>notEqualTo</td>
+</tr>
+<tr>
+<td>&#x5927;&#x4E8E;</td>
+<td>greaterThan</td>
+</tr>
+<tr>
+<td>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>greaterThanOrEqualTo</td>
+</tr>
+<tr>
+<td>&#x5C0F;&#x4E8E;</td>
+<td>lessThan</td>
+</tr>
+<tr>
+<td>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>lessThanOrEqualTo</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x5229;&#x7528;&#x4E0A;&#x8FF0;&#x8868;&#x683C;&#x4ECB;&#x7ECD;&#x7684;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x5730;&#x6784;&#x5EFA;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x67E5;&#x8BE2; index &#x5C0F;&#x4E8E; 2 &#x7684;&#x6240;&#x6709; Todo &#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;);</div><div class="line">query.lessThan(&apos;index&apos;, 2);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x53EF;&#x6BD4;&#x8F83;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x6574;&#x578B;&#x3001;&#x6D6E;&#x70B9;&#x7B49;&#x3002;</p>
+</blockquote>
+<h5 id="&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;"><a href="#&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;" class="headerlink" title="&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;"></a>&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</h5><p>&#x5F53;&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x5E76;&#x5B58;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x9ED8;&#x8BA4;&#x4E3A; AND &#x5173;&#x7CFB;&#xFF0C;&#x5373;&#x67E5;&#x8BE2;&#x53EA;&#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x4E86;&#x5168;&#x90E8;&#x6761;&#x4EF6;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5EFA;&#x7ACB; OR &#x5173;&#x7CFB;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528; &#x7EC4;&#x5408;&#x67E5;&#x8BE2;&#x3002;</p>
+<p>&#x5728;&#x7B80;&#x5355;&#x67E5;&#x8BE2;&#x4E2D;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x540C;&#x4E00;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;&#x5148;&#x524D;&#x7684;&#x6761;&#x4EF6;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#xFF0C;&#x67E5;&#x8BE2;&#x53EA;&#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4F8B;&#x5982;&#x8981;&#x627E;&#x51FA; index &#x4E3A; 0 &#x548C; 1 &#x7684;&#x6240;&#x6709; Todo&#xFF0C;&#x9519;&#x8BEF;&#x5199;&#x6CD5;&#x662F;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;);</div><div class="line">  query.equalTo(&apos;index&apos;, 0);</div><div class="line">  query.equalTo(&apos;index&apos;, 1);</div><div class="line">  query.find().then(function (results) {</div><div class="line">  // &#x5982;&#x679C;&#x8FD9;&#x6837;&#x5199;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x6761;&#x4EF6;&#x5C06;&#x8986;&#x76D6;&#x7B2C;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x67E5;&#x8BE2;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE; priority = 1 &#x7684;&#x7ED3;&#x679C;</div><div class="line">  }, function (error) {</div><div class="line">  });</div></pre></td></tr></table></figure>
+<p>&#x6B63;&#x786E;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;</p>
+<h6 id="&#x7EC4;&#x5408;&#x67E5;&#x8BE2;"><a href="#&#x7EC4;&#x5408;&#x67E5;&#x8BE2;" class="headerlink" title="&#x7EC4;&#x5408;&#x67E5;&#x8BE2;"></a>&#x7EC4;&#x5408;&#x67E5;&#x8BE2;</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const query1 = new AV.Query(&apos;Todo&apos;);</div><div class="line">const query2 = new AV.Query(&apos;Todo&apos;);</div><div class="line">    query1.equalTo(&apos;index&apos;, 0);</div><div class="line">    query2.equalTo(&apos;index&apos;, 1);</div><div class="line">const query = AV.Query.and(query1, query2);</div></pre></td></tr></table></figure>
+<h5 id="Pointer"><a href="#Pointer" class="headerlink" title="Pointer"></a>Pointer</h5><p>Pointer &#x53EA;&#x662F;&#x4E2A;&#x63CF;&#x8FF0;&#x5E76;&#x6CA1;&#x6709;&#x5177;&#x8C61;&#x7684;&#x7C7B;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#xFF0C;&#x5B83;&#x4E0E; AV.Relation &#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF1A;AV.Relation &#x662F;&#x5728;&#x4E00;&#x5BF9;&#x591A;&#x7684;&#x300C;&#x4E00;&#x300D;&#x8FD9;&#x4E00;&#x65B9;&#xFF08;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x4E00;&#x6307; TodoFolder&#xFF09;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A; AV.Relation &#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5B9E;&#x9645;&#x4E0A;&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x5BF9;&#x88AB;&#x5173;&#x8054;&#x6570;&#x636E;&#x591A;&#x7684;&#x8FD9;&#x4E00;&#x65B9;&#xFF08;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x8FD9;&#x4E2A;&#x591A;&#x6307; Todo&#xFF09;&#x7684;&#x4E00;&#x4E2A; Pointer &#x7684;&#x96C6;&#x5408;&#x3002;&#x800C;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;LeanStorage &#x4E5F;&#x652F;&#x6301;&#x5728;&#x300C;&#x591A;&#x300D;&#x7684;&#x8FD9;&#x4E00;&#x65B9;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x300C;&#x4E00;&#x300D;&#x7684;&#x8FD9;&#x4E00;&#x65B9;&#x7684; Pointer&#xFF0C;&#x8FD9;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x8BF4;&#xFF0C; Pointer &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5916;&#x952E;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x53EA;&#x662F;&#x5728; LeanCloud &#x63A7;&#x5236;&#x53F0;&#x505A;&#x4E86;&#x663E;&#x793A;&#x4F18;&#x5316;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9700;&#x6C42;&#xFF1A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5206;&#x4EAB;&#x81EA;&#x5DF1;&#x7684; TodoFolder &#x5230;&#x5E7F;&#x573A;&#x4E0A;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x770B;&#x89C1;&#x53EF;&#x4EE5;&#x7ED9;&#x4E0E;&#x8BC4;&#x8BBA;&#xFF0C;&#x6BD4;&#x5982;&#x67D0;&#x73A9;&#x5BB6;&#x5206;&#x4EAB;&#x4E86;&#x81EA;&#x5DF1;&#x60F3;&#x4E70;&#x7684;&#x6E38;&#x620F;&#x5217;&#x8868;&#xFF08;TodoFolder &#x5305;&#x542B;&#x591A;&#x4E2A;&#x6E38;&#x620F;&#x540D;&#x5B57;&#xFF09;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x7528; Comment &#x5BF9;&#x8C61;&#x6765;&#x4FDD;&#x5B58;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x7684;&#x8BC4;&#x8BBA;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x70B9;&#x8D5E;&#x7B49;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const comment = new AV.Object(&apos;Comment&apos;);// &#x6784;&#x5EFA; Comment &#x5BF9;&#x8C61;</div><div class="line">comment.set(&apos;likes&apos;, 1);// &#x5982;&#x679C;&#x70B9;&#x4E86;&#x8D5E;&#x5C31;&#x662F; 1&#xFF0C;&#x800C;&#x70B9;&#x4E86;&#x4E0D;&#x559C;&#x6B22;&#x5219;&#x4E3A; -1&#xFF0C;&#x6CA1;&#x6709;&#x505A;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x9ED8;&#x8BA4;&#x7684; 0</div><div class="line">comment.set(&apos;content&apos;, &apos;&#x8FD9;&#x4E2A;&#x592A;&#x8D5E;&#x4E86;&#xFF01;&#x697C;&#x4E3B;&#xFF0C;&#x6211;&#x4E5F;&#x8981;&#x8FD9;&#x4E9B;&#x6E38;&#x620F;&#xFF0C;&#x54B1;&#x4EEC;&#x56E2;&#x8D2D;&#x4E48;&#xFF1F;&apos;);</div><div class="line">// &#x5047;&#x8BBE;&#x5DF2;&#x77E5;&#x88AB;&#x5206;&#x4EAB;&#x7684;&#x8BE5; TodoFolder &#x7684; objectId &#x662F; 5735aae7c4c9710060fbe8b0</div><div class="line">const targetTodoFolder = AV.Object.createWithoutData(&apos;TodoFolder&apos;, &apos;5735aae7c4c9710060fbe8b0&apos;);</div><div class="line">comment.set(&apos;targetTodoFolder&apos;, targetTodoFolder);</div><div class="line">comment.save();//&#x4FDD;&#x5B58;&#x5230;&#x4E91;&#x7AEF;</div></pre></td></tr></table></figure>
+<p><strong>Pointer &#x67E5;&#x8BE2;</strong></p>
+<p>&#x5047;&#x5982;&#x5728; Todo &#x91CC;&#x9762;&#x6709;&#x4E00;&#x4E2A; Pointer &#x5B57;&#x6BB5; A&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B; &#x76F4;&#x63A5;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const query1 = new AV.Query(&apos;Todo&apos;);</div><div class="line">    query1.equalTo(&apos;index&apos;, 0);</div><div class="line">    query1.include(&apos;A&apos;)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/21/LeanCloud/new/" rel="next" title="初用 LeanCloud - 新建一个对象">
+                <i class="fa fa-chevron-left"></i> 初用 LeanCloud - 新建一个对象
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/love.png"
+               alt="小小鱼" />
+          <p class="site-author-name" itemprop="name">小小鱼</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">53</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建查询实例"><span class="nav-number">1.</span> <span class="nav-text">创建查询实例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#比较查询"><span class="nav-number">2.</span> <span class="nav-text">比较查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多个查询条件"><span class="nav-number">3.</span> <span class="nav-text">多个查询条件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#组合查询"><span class="nav-number">3.1.</span> <span class="nav-text">组合查询</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pointer"><span class="nav-number">4.</span> <span class="nav-text">Pointer</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小小鱼</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 按需加载背景 -->
+  <!-- 识别手机或电脑的js开始 -->
+  <script type="text/javascript">
+  (function(){
+    var res = GetRequest();
+    var par = res['index'];
+    if(par!='gfan'){
+      var ua=navigator.userAgent.toLowerCase();
+      var contains=function (a, b){
+          if(a.indexOf(b)!=-1){return true;}
+      };
+      if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla"))||(contains(ua,"android") && contains(ua,"opera"))||contains(ua,"ucweb7")||contains(ua,"iphone")){
+        return false;
+      } else {
+        $.getScript("/js/src/particles.js");
+      }
+    }
+  })();
+  function GetRequest() {
+    var url = location.search;
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+    }
+    return theRequest;
+  }
+
+  </script>
+  <!-- 识别手机或电脑的js结束 -->
+  <!-- 背景动画 -->
+
+ <script type="text/javascript" src="/js/src/particles.js"></script>
+
+</body>
+</html>
