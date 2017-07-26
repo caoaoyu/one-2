@@ -236,6 +236,188 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/LeanCloud/include/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="小小鱼">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/love.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="鱼儿游啊游">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/21/LeanCloud/include/" itemprop="url">
+                  初用 LeanCloud - 查询
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-21T00:00:00+08:00">
+                2017-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeanCloud/" itemprop="url" rel="index">
+                    <span itemprop="name">LeanCloud</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h5 id="&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;"><a href="#&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;"></a>&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;);</div></pre></td></tr></table></figure>
+<p>&#x6700;&#x57FA;&#x7840;&#x7684;&#x7528;&#x6CD5;&#x662F;&#x6839;&#x636E; objectId &#x6765;&#x67E5;&#x8BE2;&#x5BF9;&#x8C61;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;); query.get(&apos;57328ca079bc44005c2472d0&apos;).then(function (todo) {</div><div class="line"></div><div class="line">// todo &#x5C31;&#x662F; id &#x4E3A; 57328ca079bc44005c2472d0 &#x7684; Todo &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</div><div class="line">}, function (error) {</div><div class="line">  // &#x5F02;&#x5E38;&#x5904;&#x7406;</div><div class="line">});</div></pre></td></tr></table></figure></p>
+<h5 id="&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;"><a href="#&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;" class="headerlink" title="&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;"></a>&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;</h5><table>
+<thead>
+<tr>
+<th>&#x903B;&#x8F91;&#x64CD;&#x4F5C;</th>
+<th>AVQuery &#x65B9;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7B49;&#x4E8E;</td>
+<td>equalTo</td>
+</tr>
+<tr>
+<td>&#x4E0D;&#x7B49;&#x4E8E;</td>
+<td>notEqualTo</td>
+</tr>
+<tr>
+<td>&#x5927;&#x4E8E;</td>
+<td>greaterThan</td>
+</tr>
+<tr>
+<td>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>greaterThanOrEqualTo</td>
+</tr>
+<tr>
+<td>&#x5C0F;&#x4E8E;</td>
+<td>lessThan</td>
+</tr>
+<tr>
+<td>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>lessThanOrEqualTo</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x5229;&#x7528;&#x4E0A;&#x8FF0;&#x8868;&#x683C;&#x4ECB;&#x7ECD;&#x7684;&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x5730;&#x6784;&#x5EFA;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#x3002;</p>
+</blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x67E5;&#x8BE2; index &#x5C0F;&#x4E8E; 2 &#x7684;&#x6240;&#x6709; Todo &#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const query = new AV.Query(&apos;Todo&apos;);</div><div class="line">query.lessThan(&apos;index&apos;, 2);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>&#x6BD4;&#x8F83;&#x67E5;&#x8BE2;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x53EF;&#x6BD4;&#x8F83;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x6574;&#x578B;&#x3001;&#x6D6E;&#x70B9;&#x7B49;&#x3002;</p>
+</blockquote>
+<h5 id="&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;"><a href="#&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;" class="headerlink" title="&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;"></a>&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</h5><p>&#x5F53;&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x5E76;&#x5B58;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x9ED8;&#x8BA4;&#x4E3A; AND &#x5173;&#x7CFB;&#xFF0C;&#x5373;&#x67E5;&#x8BE2;&#x53EA;&#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x4E86;&#x5168;&#x90E8;&#x6761;&#x4EF6;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5EFA;&#x7ACB; OR &#x5173;&#x7CFB;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528; &#x7EC4;&#x5408;&#x67E5;&#x8BE2;&#x3002;</p>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/07/21/LeanCloud/include/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/LeanCloud/new/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1564,153 +1746,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/Git/git_miss/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/16/Git/git_miss/" itemprop="url">
-                  Git 踩坑路~
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T16:51:26+08:00">
-                2017-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&#x9519;&#x8BEF;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#x547D;&#x4EE4;&#xFF1A;$ Git remote add origin git@github.com:djqiang&#xFF08;github&#x5E10;&#x53F7;&#x540D;&#xFF09;/gitdemo&#xFF08;&#x9879;&#x76EE;&#x540D;&#xFF09;.git </div><div class="line">&#x51FA;&#x9519;&#x4FE1;&#x606F;&#xFF1A;fatal: remote origin already exists.</div></pre></td></tr></table></figure></p>
-<p>&#x89E3;&#x51B3;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#x90A3;&#x5C31;&#x8BC1;&#x660E;&#x4F60;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x8FC7;&#x8FDC;&#x7A0B;&#x4E86;&#xFF0C;commit-m &#x7136;&#x540E; push &#x5C31; OK&#x3002;</div></pre></td></tr></table></figure>
-<p>&#x9519;&#x8BEF; &#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">warning: LF will be replaced by CRLF in index.php.</div><div class="line">The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure></p>
-<p>&#x89E3;&#x51B3;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#x8FD9;&#x4E2A;&#x8B66;&#x544A;&#x662F;&#x81EA;&#x52A8;&#x66FF;&#x6362;&#x7684;&#x4E00;&#x4E2A;&#x9009;&#x9879;</div><div class="line"></div><div class="line">&#x547D;&#x4EE4;: $ git config --global core.autocrlf  false</div></pre></td></tr></table></figure></p>
-<p>&#x9519;&#x8BEF;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git push origin</div><div class="line">fatal: The current branch master has no upstream branch.</div><div class="line">To push the current branch and set the remote as upstream, use</div></pre></td></tr></table></figure></p>
-<p>&#x89E3;&#x51B3;&#xFF1A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push --set-upstream origin master</div></pre></td></tr></table></figure>
-
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/16/Git/git_miss/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1756,7 +1791,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-count">53</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
