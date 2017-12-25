@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,22 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
 
 
 
@@ -34,38 +45,27 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -73,11 +73,6 @@
 
 
 
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -102,9 +97,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -127,11 +124,7 @@
 
 
 
-  <title> 日期和时间戳相互转换 | 鱼儿游啊游 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>日期和时间戳相互转换 | 鱼儿游啊游</title>
   
 
 
@@ -141,36 +134,42 @@
 
 
 
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">鱼儿游啊游</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">鱼儿游啊游</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -190,18 +189,8 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -237,35 +226,29 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/29/HTML/time/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/29/HTML/time/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="小小鱼">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/love.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="鱼儿游啊游">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="鱼儿游啊游" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小小鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/love.png">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼儿游啊游">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                日期和时间戳相互转换
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">日期和时间戳相互转换</h1>
         
 
         <div class="post-meta">
@@ -274,8 +257,10 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-29T10:12:18+08:00">
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-29T10:12:18+08:00">
                 2016-08-29
               </time>
             
@@ -287,11 +272,15 @@
 
           
             <span class="post-category" >
+            
               <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML/" itemprop="url" rel="index">
@@ -310,8 +299,8 @@
           
 
           
-
           
+
           
 
           
@@ -322,7 +311,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -346,23 +337,21 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;(&#x4EE5;s&#x4E3A;&#x5355;&#x4F4D;)</div><div class="line">var timestamp = Date.parse(new Date());</div><div class="line">timestamp = timestamp / 1000;</div><div class="line">//&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1403149534</div><div class="line">console.log(&quot;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp);</div><div class="line"></div><div class="line">// &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x7684;&#x65F6;&#x95F4;&#x6233;</div><div class="line">var stringTime = &quot;2014-07-10 10:21:12&quot;;</div><div class="line">var timestamp2 = Date.parse(new Date(stringTime));</div><div class="line">timestamp2 = timestamp2 / 1000;</div><div class="line">//2014-07-10 10:21:12&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;1404958872 </div><div class="line">console.log(stringTime + &quot;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E3A;&#xFF1A;&quot; + timestamp2);</div><div class="line"></div><div class="line">// &#x5C06;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6362;&#x6210;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;</div><div class="line">var timestamp3 = 1403058804;</div><div class="line">var newDate = new Date();</div><div class="line">newDate.setTime(timestamp3 * 1000);</div><div class="line">// Wed Jun 18 2014 </div><div class="line">console.log(newDate.toDateString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT </div><div class="line">console.log(newDate.toGMTString());</div><div class="line">// 2014-06-18T02:33:24.000Z</div><div class="line">console.log(newDate.toISOString());</div><div class="line">// 2014-06-18T02:33:24.000Z </div><div class="line">console.log(newDate.toJSON());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; </div><div class="line">console.log(newDate.toLocaleDateString());</div><div class="line">// 2014&#x5E74;6&#x6708;18&#x65E5; &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleString());</div><div class="line">// &#x4E0A;&#x5348;10:33:24 </div><div class="line">console.log(newDate.toLocaleTimeString());</div><div class="line">// Wed Jun 18 2014 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;)</div><div class="line">console.log(newDate.toString());</div><div class="line">// 10:33:24 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;) </div><div class="line">console.log(newDate.toTimeString());</div><div class="line">// Wed, 18 Jun 2014 02:33:24 GMT</div><div class="line">console.log(newDate.toUTCString());</div><div class="line"></div><div class="line">Date.prototype.format = function(format) {</div><div class="line">       var date = {</div><div class="line">              &quot;M+&quot;: this.getMonth() + 1,</div><div class="line">              &quot;d+&quot;: this.getDate(),</div><div class="line">              &quot;h+&quot;: this.getHours(),</div><div class="line">              &quot;m+&quot;: this.getMinutes(),</div><div class="line">              &quot;s+&quot;: this.getSeconds(),</div><div class="line">              &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3),</div><div class="line">              &quot;S+&quot;: this.getMilliseconds()</div><div class="line">       };</div><div class="line">       if (/(y+)/i.test(format)) {</div><div class="line">              format = format.replace(RegExp.$1, (this.getFullYear() + &apos;&apos;).substr(4 - RegExp.$1.length));</div><div class="line">       }</div><div class="line">       for (var k in date) {</div><div class="line">              if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(format)) {</div><div class="line">                     format = format.replace(RegExp.$1, RegExp.$1.length == 1</div><div class="line">                            ? date[k] : (&quot;00&quot; + date[k]).substr((&quot;&quot; + date[k]).length));</div><div class="line">              }</div><div class="line">       }</div><div class="line">       return format;</div><div class="line">}</div><div class="line">console.log(newDate.format(&apos;yyyy-MM-dd h:m:s&apos;));</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
-
+    
 
     <footer class="post-footer">
+      
+
+      
+      
       
 
       
@@ -390,6 +379,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -405,9 +398,9 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
+
+  
+
 
 
         </div>
@@ -423,57 +416,71 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/love.png"
-               alt="小小鱼" />
-          <p class="site-author-name" itemprop="name">小小鱼</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">54</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/love.png"
+                alt="小小鱼" />
+            
+              <p class="site-author-name" itemprop="name">小小鱼</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
           </div>
 
           
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">21</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
+          
+
+          
           
 
           
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
+
+      
 
       
 
@@ -487,38 +494,50 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">小小鱼</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
 
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
@@ -541,52 +560,72 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
 
 
 
   
   
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
 
 
 
   
 
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
 
 
   
@@ -599,6 +638,38 @@
 
 
 
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
   
   
 
@@ -607,46 +678,6 @@
   
 
   
-
-  
-
-
-  <!-- 按需加载背景 -->
-  <!-- 识别手机或电脑的js开始 -->
-  <script type="text/javascript">
-  (function(){
-    var res = GetRequest();
-    var par = res['index'];
-    if(par!='gfan'){
-      var ua=navigator.userAgent.toLowerCase();
-      var contains=function (a, b){
-          if(a.indexOf(b)!=-1){return true;}
-      };
-      if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla"))||(contains(ua,"android") && contains(ua,"opera"))||contains(ua,"ucweb7")||contains(ua,"iphone")){
-        return false;
-      } else {
-        $.getScript("/js/src/particles.js");
-      }
-    }
-  })();
-  function GetRequest() {
-    var url = location.search;
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-      var str = url.substr(1);
-      strs = str.split("&");
-      for(var i = 0; i < strs.length; i ++) {
-        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-      }
-    }
-    return theRequest;
-  }
-
-  </script>
-  <!-- 识别手机或电脑的js结束 -->
-  <!-- 背景动画 -->
-
- <script type="text/javascript" src="/js/src/particles.js"></script>
 
 </body>
 </html>
