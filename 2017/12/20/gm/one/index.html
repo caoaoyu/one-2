@@ -77,7 +77,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/20/gm/one/index.html">
 <meta property="og:site_name" content="鱼儿游啊游">
 <meta property="og:description" content="GraphicsMagick and ImageMagick for node   &amp;#x5B9E;&amp;#x4F8B;&amp;#xFF1A; 123456789gm()  .append(files_path)  .write(`one.png`, (error) =&amp;gt; {    if(!error) {      resolve(unionid);      return    }    rej">
-<meta property="og:updated_time" content="2017-12-25T10:15:06.000Z">
+<meta property="og:updated_time" content="2017-12-25T10:18:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 GM 来做图片拼接">
 <meta name="twitter:description" content="GraphicsMagick and ImageMagick for node   &amp;#x5B9E;&amp;#x4F8B;&amp;#xFF1A; 123456789gm()  .append(files_path)  .write(`one.png`, (error) =&amp;gt; {    if(!error) {      resolve(unionid);      return    }    rej">
@@ -330,8 +330,7 @@
 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">gm()</div><div class="line">  .append(files_path)</div><div class="line">  .write(`one.png`, <span class="function"><span class="params">(<span class="built_in">error</span>)</span> =&gt;</span> {</div><div class="line">    <span class="keyword">if</span>(!<span class="built_in">error</span>) {</div><div class="line">      resolve(unionid);</div><div class="line">      <span class="keyword">return</span></div><div class="line">    }</div><div class="line">    reject(<span class="built_in">error</span>)</div><div class="line">  });</div></pre></td></tr></table></figure>
 <p>files_path &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x7EC4;&#x56FE;&#x7247;<br>&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x591A;&#x4E2A; append &#x6765;&#x62FC;&#x63A5;&#x56FE;&#x7247;</p>
 <p>append&#xFF1A;</p>
-<p>gm(&#x201C;img.png&#x201D;)<br>  .append(&#x201C;another.jpg&#x201D;)<br>  .append(true)<br>  // &#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x62FC;&#x63A5;&#x56FE;&#x7247;</p>
-<p>gm(&#x201C;img.png&#x201D;)<br>  .append(&#x201C;another.jpg&#x201D;)<br>  // &#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x62FC;&#x63A5;&#x56FE;&#x7247;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">gm</span><span class="params">(<span class="string">&quot;img.png&quot;</span>)</span></span></div><div class="line">  .append(<span class="string">&quot;another.jpg&quot;</span>)</div><div class="line">  .append(true)</div><div class="line">  <span class="comment">// &#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x62FC;&#x63A5;&#x56FE;&#x7247;</span></div><div class="line"></div><div class="line"><span class="function"><span class="title">gm</span><span class="params">(<span class="string">&quot;img.png&quot;</span>)</span></span></div><div class="line">  .append(<span class="string">&quot;another.jpg&quot;</span>)</div><div class="line">  <span class="comment">// &#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x62FC;&#x63A5;&#x56FE;&#x7247;</span></div></pre></td></tr></table></figure>
 <p>outPut &#xFF1A;</p>
 <ul>
 <li>write - &#x5C06;&#x5904;&#x7406;&#x540E;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x5199;&#x5165;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x540D;</li>
