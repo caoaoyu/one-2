@@ -249,7 +249,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/26/JavaScript/prototype/" itemprop="url">原型 - 继承与原型链</a></h1>
+                <a class="post-title-link" href="/2017/12/26/JavaScript/prototype/" itemprop="url">原型 - 继承 - 原型链</a></h1>
         
 
         <div class="post-meta">
@@ -327,10 +327,9 @@
 </blockquote>
 <h4 id="&#x539F;&#x578B;"><a href="#&#x539F;&#x578B;" class="headerlink" title="&#x539F;&#x578B;"></a>&#x539F;&#x578B;</h4><p>&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x5C5E;&#x6027; &#x79F0;&#x4E4B;&#x4E3A; Prototype</p>
 <h4 id="&#x539F;&#x578B;&#x94FE;"><a href="#&#x539F;&#x578B;&#x94FE;" class="headerlink" title="&#x539F;&#x578B;&#x94FE;"></a>&#x539F;&#x578B;&#x94FE;</h4><p>&#x5B83;&#x6301;&#x6709;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x79F0;&#x4E3A;&#x5176; prototype &#x5BF9;&#x8C61;&#xFF08;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#xFF09;&#x7684;&#x94FE;&#x63A5;&#x3002;&#x8BE5; prototype &#x5BF9;&#x8C61;&#x53C8;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x539F;&#x578B;&#xFF0C;&#x5C42;&#x5C42;&#x5411;&#x4E0A;&#x76F4;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x4E3A; null&#xFF0C; null &#x6CA1;&#x6709;&#x539F;&#x578B;&#xFF0C;&#x53EA;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x73AF;&#x8282;&#x3002;</p>
+<h4 id="&#x7EE7;&#x627F;"><a href="#&#x7EE7;&#x627F;" class="headerlink" title="&#x7EE7;&#x627F;"></a>&#x7EE7;&#x627F;</h4><p>JavaScript &#x5E76;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x8BED;&#x8A00;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x201C;&#x65B9;&#x6CD5;&#x201D;&#x3002;&#x5728; JavaScript &#x91CC;&#xFF0C;&#x4EFB;&#x4F55;&#x51FD;&#x6570;&#x90FD;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5230;&#x5BF9;&#x8C61;&#x4E0A;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x7EE7;&#x627F;&#x4E0E;&#x5176;&#x4ED6;&#x7684;&#x5C5E;&#x6027;&#x7EE7;&#x627F;&#x6CA1;&#x6709;&#x5DEE;&#x522B;</p>
 <h4 id="prototype-&#x548C;-Object-getPrototype"><a href="#prototype-&#x548C;-Object-getPrototype" class="headerlink" title="prototype &#x548C; Object.getPrototype"></a>prototype &#x548C; Object.getPrototype</h4><p>prototype&#x662F;&#x7528;&#x4E8E;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x800C; Object.getPrototypeOf() &#x662F;&#x7528;&#x4E8E;&#x5B9E;&#x4F8B;&#x7684;&#xFF08;instances&#xFF09;&#xFF0C;&#x4E24;&#x8005;&#x529F;&#x80FD;&#x4E00;&#x81F4;&#xFF0C; &#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x4F60;&#x6267;&#x884C;&#xFF1A;</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="type">Person</span>();</div></pre></td></tr></table></figure>
-<p>JavaScript &#x5B9E;&#x9645;&#x4E0A;&#x6267;&#x884C;&#x7684;&#x662F;&#xFF1A;</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var <span class="keyword">person</span> = new Object();</div><div class="line"><span class="keyword">person</span>.__proto__ = <span class="keyword">Person</span>.prototype;</div><div class="line"><span class="keyword">Person</span>.call(<span class="keyword">person</span>);</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/26/JavaScript/prototype/#more" rel="contents">
