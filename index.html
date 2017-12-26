@@ -230,6 +230,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/JavaScript/prototype/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小小鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/love.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼儿游啊游">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/26/JavaScript/prototype/" itemprop="url">原型 - 继承与原型链</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+                2017-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>JavaScript &#x53EA;&#x6709;&#x4E00;&#x79CD;&#x7ED3;&#x6784;&#xFF1A;&#x5BF9;&#x8C61;&#x3002;</p>
+</blockquote>
+<h4 id="&#x539F;&#x578B;"><a href="#&#x539F;&#x578B;" class="headerlink" title="&#x539F;&#x578B;"></a>&#x539F;&#x578B;</h4><p>&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x5C5E;&#x6027; &#x79F0;&#x4E4B;&#x4E3A; Prototype</p>
+<h4 id="&#x539F;&#x578B;&#x94FE;"><a href="#&#x539F;&#x578B;&#x94FE;" class="headerlink" title="&#x539F;&#x578B;&#x94FE;"></a>&#x539F;&#x578B;&#x94FE;</h4><p>&#x5B83;&#x6301;&#x6709;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x79F0;&#x4E3A;&#x5176; prototype &#x5BF9;&#x8C61;&#xFF08;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#xFF09;&#x7684;&#x94FE;&#x63A5;&#x3002;&#x8BE5; prototype &#x5BF9;&#x8C61;&#x53C8;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x539F;&#x578B;&#xFF0C;&#x5C42;&#x5C42;&#x5411;&#x4E0A;&#x76F4;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x4E3A; null&#xFF0C; null &#x6CA1;&#x6709;&#x539F;&#x578B;&#xFF0C;&#x53EA;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x73AF;&#x8282;&#x3002;</p>
+<h4 id="prototype-&#x548C;-Object-getPrototype"><a href="#prototype-&#x548C;-Object-getPrototype" class="headerlink" title="prototype &#x548C; Object.getPrototype"></a>prototype &#x548C; Object.getPrototype</h4><p>prototype&#x662F;&#x7528;&#x4E8E;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x800C; Object.getPrototypeOf() &#x662F;&#x7528;&#x4E8E;&#x5B9E;&#x4F8B;&#x7684;&#xFF08;instances&#xFF09;&#xFF0C;&#x4E24;&#x8005;&#x529F;&#x80FD;&#x4E00;&#x81F4;&#xFF0C; &#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x4F60;&#x6267;&#x884C;&#xFF1A;</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="type">Person</span>();</div></pre></td></tr></table></figure>
+<p>JavaScript &#x5B9E;&#x9645;&#x4E0A;&#x6267;&#x884C;&#x7684;&#x662F;&#xFF1A;</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var <span class="keyword">person</span> = new Object();</div><div class="line"><span class="keyword">person</span>.__proto__ = <span class="keyword">Person</span>.prototype;</div><div class="line"><span class="keyword">Person</span>.call(<span class="keyword">person</span>);</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/26/JavaScript/prototype/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/25/gm/one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1675,156 +1829,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/Redux/mergeProps/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小小鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/love.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鱼儿游啊游">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/15/Redux/mergeProps/" itemprop="url">Redux mergeProps 语法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T00:00:00+08:00">
-                2017-05-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Redux/" itemprop="url" rel="index">
-                    <span itemprop="name">Redux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">connect(</div><div class="line">    <span class="string">[mapStateToProps]</span>,</div><div class="line">    <span class="string">[mapDispatchToProps]</span>,</div><div class="line">    <span class="string">[mergeProps]</span>,</div><div class="line">    <span class="string">[options]</span></div><div class="line">    )</div></pre></td></tr></table></figure>
-<p>&#x8FDE;&#x63A5; React &#x7EC4;&#x4EF6;&#x4E0E; Redux store&#x3002;</p>
-<p>&#x8FDE;&#x63A5;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x7EC4;&#x4EF6;&#x7C7B;&#x3002;<br>&#x53CD;&#x800C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5DF2;&#x4E0E; Redux store &#x8FDE;&#x63A5;&#x7684;&#x7EC4;&#x4EF6;&#x7C7B;<br>mergeProps &#x662F; connect &#x5176;&#x4E2D;&#x4E00;&#x4E2A; fun&#xFF0C; &#x7528;&#x6765;&#x5408;&#x5E76; state &#x4E2D;&#x7684;&#x6570;&#x636E;</p>
-<p>&#x8BED;&#x6CD5;&#xFF1A;<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function mergeProps(<span class="keyword">state</span>Props, dispatchProps, ownProps) {</div><div class="line">  return {</div><div class="line">    ...<span class="keyword">state</span>Props,</div><div class="line">    ...dispatchProps,</div><div class="line">    ...ownProps,</div><div class="line">    <span class="literal">all</span>: <span class="literal">all</span>(<span class="keyword">state</span>Props),</div><div class="line">  };</div><div class="line">}</div></pre></td></tr></table></figure></p>
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/15/Redux/mergeProps/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1879,7 +1883,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
